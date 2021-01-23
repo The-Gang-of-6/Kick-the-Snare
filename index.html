@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick The Snare</title>
+    <link rel="stylesheet" href="css/header-style.css">
+    <link rel="stylesheet" href="css/footer-style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <iframe src="header.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+
+    <iframe src="aside.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+
+    <iframe src="drumMachine.html" name="main-iframe" loading="lazy"
+        onload=" this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+
+    <iframe src="footer.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove();"></iframe>
+</body>
+
+</html>

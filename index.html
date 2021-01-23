@@ -18,17 +18,17 @@
 </head>
 
 <body>
-    <iframe src="../content-pages/header.html"
-        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+    <iframe src="../content-pages/header.html" id="header-iframe"></iframe>
 
-    <iframe src="../content-pages/aside.html"
-        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+    <iframe src="../content-pages/aside.html" id="aside-iframe"></iframe>
 
-    <iframe src="../content-pages/drumMachine.html" name="main-iframe" loading="lazy"
-        onload=" this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+    <iframe src="../content-pages/drumMachine.html" id="main-iframe" id="main-iframe"></iframe>
 
-    <iframe src="../content-pages/footer.html"
-        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove();"></iframe>
+    <iframe src="../content-pages/footer.html" id="footer-iframe"></iframe>
 </body>
+
+<script type="text/javascript" src="../js/app.js"></script>
+<script type="text/javascript" src="js/animation.js"></script>
+<script type="text/javascript" src="js/instrument.js"></script>
 
 </html>

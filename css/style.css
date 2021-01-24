@@ -1,0 +1,11 @@
+:root{
+
+    --main-bg-color: brown;
+    --main-text-color: white;
+
+}
+
+
+header{
+    color:(--main-text-color)
+}

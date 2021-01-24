@@ -27,6 +27,7 @@ window.addEventListener('load', function () {
     var products = d.getElementById('products')
     var aboutUs = d.getElementById('aboutUs')
     var cart = d.getElementById('cart');
+    var product = d.getElementById('product');
 
 
 
@@ -34,6 +35,7 @@ window.addEventListener('load', function () {
     products.addEventListener('click', changeMainSection)
     aboutUs.addEventListener('click', changeMainSection)
     cart.addEventListener('click', changeMainSection);
+    product.addEventListener('click', changeMainSection);
 
 })
 

@@ -1,6 +1,6 @@
 :root{
 
-
+    
     --main-background-color:#1A1A1D;
     --main-heading-text-color: #c3073F;
     --border-color: white;
@@ -12,4 +12,14 @@
 }
 
 
+header{
+    
+    width: 100%;
+    height: auto;    
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
 

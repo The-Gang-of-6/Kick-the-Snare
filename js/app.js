@@ -26,12 +26,14 @@ window.addEventListener('load', function () {
     var drumMachine = d.getElementById('drumMachine')
     var products = d.getElementById('products')
     var aboutUs = d.getElementById('aboutUs')
+    var cart = d.getElementById('cart');
 
 
 
     drumMachine.addEventListener('click', changeMainSection)
-    products.addEventListener('products', changeMainSection)
+    products.addEventListener('click', changeMainSection)
     aboutUs.addEventListener('click', changeMainSection)
+    cart.addEventListener('click', changeMainSection);
 
 })
 

@@ -1,3 +1,4 @@
+
 .about-us-container {
   width: 100%;
   height: 100%;
@@ -11,20 +12,29 @@
 .contributer {
   text-align: center;
   width: 200px;
-  /* box-shadow:  */
+  box-shadow: var(--box-shodow);
 }
 .contributer-img {
   margin-top: 5px;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 .contributer-name {
   padding: 15px;
   text-align: center;
+  color: var(--main-heading-text-color);
+  font-size: 28px;
 }
 
 .contributer-bio {
   padding: 0 20px;
   width: 160px;
   text-align: center;
+  color: var(--main-text-color);
+}
+
+.soical-media-icons {
+  color: var(--main-text-color);
+  font-size: 30px;
+  padding-top: 30px;
 }

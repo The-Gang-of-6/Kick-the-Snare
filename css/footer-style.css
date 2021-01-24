@@ -1,29 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
-
-.footer-container{
-
-width: 100%;
-height: 100%;    
-background-color: var(--footer-background-color);
+.footer-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--footer-background-color);
 }
 
-
-
-.footer-contacts{
-margin-left: 5%;
-margin-top: 5%;
-color:var(--main-text-color)
+.inner-footer {
+  margin: 0%;
+  padding: 0%;
+  background-color: var(--footer-background-color);
+}
+.sociel-links {
+  display: flex;
+}
+.sociel-links ul {
+  position: absolute;
+  padding: 20px;
+  width: 100%px;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  float: right;
+}
+.sociel-icons {
+  list-style: none;
+}
+.sociel-icons a {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 50%;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: white;
+}
+.quick-links {
+  width: 100%px;
+  height: 100%px;
+  margin-left: 50%;
+  display: flex;
 }
 
-.footer-imgs{   
-margin-right: 5%;
-margin-top: 50%;
+.quick-items a {
+  text-decoration: none;
+  padding: 0px 15px;
+  font-size: 18px;
+  color: white;
+  float: right;
 }
-
-.copy-rights{
-color: white;
-font-family:'Hachi Maru Pop', cursive;
-margin-left:50% ; 
-margin-bottom: 7%;
+.outer-footer {
+  padding: 10px;
+  text-align: center;
+  color: var(white);
+  font-family: "Hachi Maru Pop", cursive;
 }

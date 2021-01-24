@@ -8,14 +8,14 @@
   gap: 50px;
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 6px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
   font-family: arial;
   width: 350px;
-  height: 530px;
-  border: 5px solid gray;
+  height: 539px;
+  border-radius: 5px;
 }
-.card img {
+.card img { 
   width: 300px;
   height: 300px;
 }
@@ -34,8 +34,13 @@
   background-color: var(--main-heading-text-color);
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   font-size: 18px;
+  border-radius: 20px;
+  margin-left: 25%;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
+
+
 }
 
 .card .add-to-cart:hover,
@@ -49,7 +54,11 @@
   font-family: serif;
 }
 .card-head {
-  color: black;
-  font-size: 1rem;
+  font-size:30px;
   font-weight: bold;
+  color:var(--main-heading-text-color);
+  margin-top: 15px;
+  text-indent: 5px;
+  letter-spacing: 3px;
+
 }

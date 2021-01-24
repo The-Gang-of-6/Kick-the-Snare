@@ -1,29 +1,28 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
-
-.footer-container{
-
-width: 100%;
-height: 100%;    
-background-color: var(--footer-background-color);
+.footer-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--footer-background-color);
+  padding: 25px;
 }
 
-
-
-.footer-contacts{
-margin-left: 5%;
-margin-top: 5%;
-color:var(--main-text-color)
+.sociel-links {
+  display: flex;
+  justify-content: center;
 }
 
-.footer-imgs{   
-margin-right: 5%;
-margin-top: 50%;
+.sociel-icon {
+  font-size: 30px;
 }
 
-.copy-rights{
-color: white;
-font-family:'Hachi Maru Pop', cursive;
-margin-left:50% ; 
-margin-bottom: 7%;
+.quick-links {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.copy-rights {
+  margin-top: 30px;
+  text-align: center;
+  font-family: var(--font-hachi);
+  color: var(--main-text-color);
 }

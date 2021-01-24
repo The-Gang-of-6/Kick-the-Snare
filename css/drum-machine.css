@@ -71,10 +71,14 @@
 
 /* volume slider */
 .volume-slider-container {
+  display:flex;
   margin-left: 20px;
   width: 170px;
 }
-
+.volume-slider-container > i{
+  margin: 0px 5px;
+  color:  var(--main-heading-text-color); ;
+}
 .volume-slider {
   -webkit-appearance: none;
   width: 100%;
@@ -115,47 +119,81 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
+  width: 100%;
 }
 
 .left-panal{
   padding: 25px;
-  width: 30%;
+  width: 25%;
   display: grid;
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   grid-template-columns: auto auto auto;
+
+  background-color: #d3d3d3;
+  transform: skew(0deg, 13deg);
+  border-top-left-radius: 219px 41px;
+  box-shadow: 0 25px #999;
+  
 
 }
 
 .middle-panal{
   padding: 25px;
-  width: 30%;
+  width: 25%;
   display: grid;
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   grid-template-columns: auto auto auto;
-  
+  background-color: #d3d3d3;
+  transform: translate(0px, 61px);
+  box-shadow:0 25px #999
 }
 
 .right-panal{
   padding: 25px;
-  width: 30%;
+  width: 25%;
   display: grid;
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   grid-template-columns:  auto auto auto;
- 
+  background-color: #d3d3d3;
+  transform: skew(0deg, -13deg);
+  border-top-right-radius: 219px 41px;
+  box-shadow: 0 25px #999
 }
 
 .drum-key{
-  padding: 50px;
-  background: none; 
-  border: solid 0.5px var(--main-background-color);
-}
-
-
-.red-box-shadow:hover {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
   cursor: pointer;
-  box-shadow: var(--box-shodow);
+  outline: none;
+  color: #fff;
+  background-color: var(--drum-machine-button-main-color);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  
+ 
+  
 
 }
+
+.drum-key:hover{
+  cursor: pointer;
+  background-color: var(--drum-machine-button-second-color);
+
+  transition: 0.3s;
+}
+
+
+.drum-key:active {
+  background-color: var(--drum-machine-button-second-color);
+  box-shadow: 0 5px skyblue;
+ 
+  transform: translateY(4px);
+  
+}
+

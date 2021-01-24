@@ -7,12 +7,22 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
 .contributer {
+  margin-left: 50px;
   text-align: center;
-  width: 200px;
-  box-shadow: var(--box-shodow);
+  width: 300px;
+  box-shadow: 0px 0px 11px 2px #ccc;
+  animation: fadeIn ease 1s;
+  
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 .contributer-img {
   margin-top: 5px;
@@ -27,14 +37,30 @@
 }
 
 .contributer-bio {
+  display: block;
+  margin: auto;
   padding: 0 20px;
   width: 160px;
   text-align: center;
-  color: var(--main-text-color);
+  color: var(--main-text-color-black);
+
 }
 
 .soical-media-icons {
-  color: var(--main-text-color);
+  cursor: pointer;
+  color: var(--main-heading-text-color);
   font-size: 30px;
   padding-top: 30px;
+  padding-bottom: 30px;
+
 }
+
+.soical-media-icons> a  > i {
+  transition: 0.3s;
+}
+.soical-media-icons > a > i:hover {
+  color: black ;
+  transform: scale(1.5);
+
+}
+

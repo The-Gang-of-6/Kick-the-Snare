@@ -1,44 +1,55 @@
 .Products-container {
-    width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    
-  }
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-family: arial;
-    width:350px;
-    height: 450px;
-  }
-  .card img {
-      width:300px;
-      height:300px;
-  }
-  .price {
-    color: grey;
-    font-size: 22px;
-  }
-  .card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  .card button:hover {
-    opacity: 0.7;
-  }
-  .cont{
-    padding: 2px 16px;
-  }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: arial;
+  width: 350px;
+  height: 530px;
+  border: 5px solid gray;
+}
+.card img {
+  width: 300px;
+  height: 300px;
+}
+.price {
+  color: rgb(119, 62, 62);
+  font-size: 22px;
+}
+.card .add-to-cart,
+.card .show-det {
+  display: block;
+  border: none;
+  margin-top: 10px;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: var(--main-heading-text-color);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
 
-.desc{
-    overflow-y: auto;
+.card .add-to-cart:hover,
+.card .show-det:hover {
+  opacity: 0.7;
+}
+
+.desc {
+  height: 70px;
+  overflow-y: auto;
+  font-family: serif;
+}
+.card-head {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
 }

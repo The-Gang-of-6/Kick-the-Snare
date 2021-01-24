@@ -1,35 +1,19 @@
-:root{
-
-<<<<<<< HEAD
-    --main-bg-color: brown;
-    --main-text-color: white;
-=======
-    
-    --main-background-color:#1A1A1D;
-    --main-heading-text-color: #c3073F;
-    --border-color: white;
-    --box-shodow: 0px 0px 3px 5px  #950740;
-    --main-text-color: white;
-    --header-background-color: #6f2232;
-    --footer-background-color: #6f2232;
->>>>>>> 5255af7651ba59444e7d79026004796bcf438c48
-
+:root {
+  --main-background-color: #1a1a1d;
+  --main-heading-text-color: #c3073f;
+  --border-color: white;
+  --box-shodow: 0px 0px 3px 5px #950740;
+  --main-text-color: white;
+  --header-background-color: #6f2232;
+  --footer-background-color: #6f2232;
 }
 
-
-header{
-<<<<<<< HEAD
-    color:(--main-text-color)
-}
-=======
-    
-    width: 100%;
-    height: auto;    
+header {
+  width: 100%;
+  height: auto;
 }
 
-main{
-    width: 100%;
-    height: auto;
+main {
+  width: 100%;
+  height: auto;
 }
-
->>>>>>> 5255af7651ba59444e7d79026004796bcf438c48

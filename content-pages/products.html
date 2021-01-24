@@ -1,64 +1,102 @@
 <main id="main">
-    <div class="Products-container">
-
-        <h2> Products Cards :</h2>
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOymG1XagfXljxaSONDrH8nKEmE1Dfv5o0ZQ&usqp=CAU"
-                alt="">
-            <h1> Violin </h1>
-            <p class="price"> $1400 </p>
-            <p class="desc">the violin has a fretless fingerboard. Its strings are hitched to tuning pegs and to a
-                tailpiece passing over a bridge held in place by the pressure of the strings. </p>
-            <p><button> Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="data:image/jpeg;base64,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"
-                alt="">
-            <h1> Drum </h1>
-            <p class="price"> $800 </p>
-            <p class="desc"> Drums are the world's oldest and most ubiquitous musical instruments, and the basic design
-                has remained virtually unchanged for thousands of years. </p>
-            <p><button> Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNz7jJgVsIGCm7TGshFW-btKMaJ4alrWOYUQ&usqp=CAU"
-                alt="">
-            <h1> Oud </h1>
-            <p class="price"> $2000 </p>
-            <p class="desc"> denotes a thin piece of wood similar to the shape of a straw. It may refer to the wooden
-                plectrum traditionally used for playing the oud, to the thin strips of wood used for the back . </p>
-            <p><button> Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="https://www.eskchat.com/wp-content/uploads/2018/01/%D8%A7%D9%84%D9%87%D8%A7%D8%B1%D8%A8.jpg"
-                alt="">
-            <h1> Harp </h1>
-            <p class="price"> $2500 </p>
-            <p class="desc"> The harp is a stringed musical instrument that has a number of individual strings running
-                at an angle to its soundboard; the strings are plucked with the fingers. </p>
-            <p><button> Add to Cart</button></p>
-        </div>
-
-        <div class="card">
-            <img src="https://www.eskchat.com/wp-content/uploads/2018/01/%D8%A7%D9%84%D8%AF%D9%81-%D9%88%D8%A7%D9%84%D8%B1%D9%82-300x215.jpg"
-                alt="">
-            <h1> Tambourine </h1>
-            <p class="price"> $750 </p>
-            <p class="desc"> The tambourine is a musical instrument in the percussion family consisting of a frame,
-                often of wood or plastic, with pairs of small metal jingles </p>
-            <p><button> Add to Cart</button></p>
-        </div>
-
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA1oBJ5_ygxqkk0Y1_0XsK2dxHBGab2j6uWg&usqp=CAU"
-                alt="">
-            <!-- <div class="cont"> -->
-            <h1> Trumpet </h1>
-            <p class="price"> $1750 </p>
-            <p class="desc"> The trumpet is a brass instrument commonly used in classical and jazz ensembles . </p>
-            <p><button> Add to Cart</button></p>
-            <!-- </div> -->
-
-        </div>
+  <div class="Products-container">
+    <!-- <h2>Products Cards :</h2> -->
+    <div class="card">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOymG1XagfXljxaSONDrH8nKEmE1Dfv5o0ZQ&usqp=CAU"
+        alt=""
+      />
+      <h3 class="card-head">Violin</h3>
+      <p class="price">$1400</p>
+      <p class="desc">
+        the violin has a fretless fingerboard. Its strings are hitched to tuning
+        pegs and to a tailpiece passing over a bridge held in place by the
+        pressure of the strings.
+      </p>
+      <button class="add-to-cart" id="card1" >Add to Cart</button>
+      <button class="show-det" id="show1" >Show Details</button>
     </div>
+    <div class="card">
+      <img
+        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIVFRUXFxUYFxgVFRUWFhcWFRUYFhcYFxUYHSggGB0mHRUVITEiJSktLi8uFx8zODMtNygtLi0BCgoKDg0OGxAQGi8mICUtLS0tLTMtLTItLS8tLTUtLSsvLSstLS0tLS0tLS0tLS0tLS0tLS0tLS0tNS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAgQDBQYBBwj/xABJEAABAwIDAgoECggFBQEAAAABAAIDBBESITEFUQYTMkFhcXKBkbEiobPBBxQjJDM0UmKD8EJDc5KisrThU4KT0dIVJcLD0xb/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAgMEAQUG/8QAMBEAAgECBAQEBAcBAAAAAAAAAAECAxEEEiExMkFRsRNxkaEFFGHRIjM0coHB4UL/2gAMAwEAAhEDEQA/APuKIiALxrrqD3KTEBJERAEREARFFxQEkULdKk0oD1ERAEREAREQBeNdfNQc66kzRASREQBERAEWOWYN1P59yxwVTZBdpyBsd91HPHNlvqds7XLCKCkCpHD1ERAFjc5TcMlFjUAY1TVTataIYnSkXDbesgXPRmo7P2i2QAghVOtBTUG9SWV2zF1ERWkQiIgCgFNeOCAipNCAL1AEREAREQBY3uupPFwvGN5ygDGqaIgCLxzgMytTtLbscY1z9fh+epVVa0KSvJkowctjavkA1K0m1OEMceQNzoAMyTuFvcqTYKupz+hjPO4emR0M5u+3UtxszYkMObW4n873+k89/MOgWCy5q9fh/DHrzLcsIb6s0jKGrqc3niIzvF5D1N/R63Z9C6DZmz2Qswx31JcXEkucdST3DoV1RLVfRw0KWq36kJ1HLTkeKQCAL1aCsIiIAiIgPHNBFiLg6grla/YklO4y0gJZq6HdvMe8fd8Ny6tFTWoxqq0icJuL0NNsXbbJW65+sW1W5C0e2Ng43cdARHNqeZr7fatofvDPrWHZG2iHGKZpY8atdr1jmI6RkVmhVnQeSrtyl9yxwU1mh6HRIvGOBFwvVvKAiIgCIiAIiIAiIgCIqVdtOOMEucPFQnUjBXk7HVFydkXSVrdobYjiGZC1/HVNRyBgj+064Fvut1d5dKv0GxIoziN5H/afnbsjRvn0rL4tWt+WrLq/6RbkjDi9DWD41U8kcUz7TxmR91mvjYda2eztiRRHFbG/7b83d3M3uWzRWUsLCDzPV9WRlVbVlogiItJWEREAREQBERAEREAREQBUNq7KjnAxZOHJeOU0+8dCvooyipK0lodTad0cxTV0tM8Rz6HkvHJf/sejXrXRwTBwuCo1VMyRpY9oc06g/nI9K56SGWkOIEvh36uZ0O3jp8d6xWnhttYe6/wu0qfR9zp0VahrWyNu0qytsJxms0XoUtNOzCIikcCIqlZLa+dgACbGxJN7C/MMvJRnNRV2dSuW1Wq61kYu5w6udcnWbcwn0bA6ANGpOQHSt7s7YwAD5/Tk1tqxp3Ac/WfUsVPFzraUo2+rLpUlDWbMJq558om4WfbdkO7nd3ZK1RbEjYcT/lH73aA/dboPPpW0RXQw0U803mfV/wBIg6jtaOiCIi0lYREQBERAEREAREQBERAERRcUBJFAN61JpQHqIscs7W2xOAubC5Audw3oDIvCFWZtGEuDRIzEcgMQuSACQBzmxGSV+0YYReaVkY5sbgL9QOvcgNVW7JfE7jabTV0fvZu6vBXdlbWbKLaO0IOWe63MVS//AFsDvomySD7TWFrP3n2VSrIlPGtAik3h2LF0OsPXqsc6Eqbz0f5jyfl0ZcpqStP1Oh2hWshjMkhs0WvkSbuIaAAN5IHetfV8I4o2lz2yBoAcTgysSAM9Dz5a+iei9E7RxswTNJIwnCNThcCLG+eYWqruGTGgs+LY230c8AZdGE2WilVVRXXpzRXKLi9Tt6aobIxsjDdrmhzTmLhwuDY9BVLbOzDM2zZDG7eBcEdIXAn4SnRtDI6WNrWgBo4w2AGQAAaFrqv4Q5pNYwOzI8eSlOmpq0kcUmndHdbG4GxxSCaWQzPBu24wsad+G5uesrpibL4c/hTI7nkHZqJAs9PteR36+rHVVut4FhSFOMFaKEpOTuz6pFwhhexsjA97HGzS1hz6T9kWubm2m+ys7H2tFUx8ZESQHFpuLEOGoPiNN64HY9LM5oZHWTxttaxEcgtuthGS3eztgV9OH8TVxSB7sZEkRb6RAbq0nKzQLDLJSOHYoudiq9oM+kghf0xSFvqetjDtUHlscw9OY8QgNiixxTtdyXA9+fgoSVcbTZz2gi1xcXAOhI5ggM6KvTVschIZI1xABIBBIBFwSNRdWEAREJQAleNN1jc66yNGSA9REQBQCmvCEBEqTQgC9QBaPbdIDPDM8Di4o6gueTYMJ4ogk7rMd0ZdS3i5X4UD/wBsqBe1+Jaep88bSOogkd6A+UbV4ZyVTm4I4oAx+Nr42uDy7EHB4BNgbi9yLq1sqlmlPGBjnuOskhL3H8R/uW04JcGqdkbZT8rIcyXDJh3BmmW83PUuvY1efVx2VuMF6mqGGurtmootnSDN7rnrJ9ZW6hJAtl4KbWLO1qo+Yqy3kW+DBcipJAXanTQjIhVn0zMXyrGYjo8tFnde4rctYse0KTHE9oFzYlvaGbc+tVSpyl+K+pNNLSxUbs5g0Y2w1IaLDvAspiiG4eAWp2DtrE4AktcDYjQgjUELrCxtzh0sD1E6j3965Rj4l77nHKzNT8SG4eAUTQN+yPALcYAvDGFd4AzmpZS4c25dWXkrLKyZv6Z6jY83UrTo1hcxcyyjs2c0fIkdpSWu4A7hnfxCxHaIPKYe438145qwPYu+PVjsznhQfIobVsc2EjquLd3MuZdwgkp3SvLGTGQAPMuJ17NDRiF/SGEAZrrntWi4R0VOYnySuEYaCS//AHH6XVqrqeP1tNen2Kp4bS8WbfgcHzVTKwRNbHJSvDnMBDOMMsYaxtydBG/IaWz5l3S+c/AVUOfQS3JsKqQNB/RaYon28XE96+jL0TKCVicbqbxdGNQBjVJEQBERAEREAREQBcr8I8PHUjqRjmiaZ0fFtcSARFNE95uAbAAesb11S1lfs8vnilsCGMlbY64nmMtI/cPigPm2ynPo8LajC9riWXYXXDha49JovYm3WDmuupWMkF4pB2X5H+64HbPCN7m8VVy/LNlYW/JgERNecQxRttYlltfUur2G69rKmpSpVH+Lf3Lk6tOOazs/Q3L6SVurD3Z+SxiVbeneRoSlXs9s3Kc8He0gH1hZ3gbcMiaxPVGtbMvZH4hbER0tNj4rFU8E5NY617O2xr/eFoq+mq4b/Oo3gc5hsObna7pHiFH5WqtmiXjw6Fs8HITJxhklLjr6Tc+s4brexSBoDRoFwUm3qluslMetlRf1BeM4Vyc76e/VUf8ABR+Xqp3sjvjQZ9B+MKJqFwzOFY/Skh7mT/8AFW4eFVP+lLfsxyf+QUvBrdB4tM6t06xumWnh2xG8YmxzuG/i/R1A1xbyPFThIlzD3gdFgfHNc+Vqvdo548DYOmWrrtu08XLmYOgHEfAXK9m2JERd+N/bkdb+Gy0lbTsj+jY1nS1oB/e19amsDfikReJ6IwbT4Ym3zeBzvvy/Js6wOU4dVlzDtk1u0cUj5WOEednEshZvLWNa4utvIva6z7ROpW24JcJ4o6WaGGTDWYi6P5O92gYnWc5pbk1rjY9y0Qo0qT039yDdSor8vY6f4H6Q0sU9JM5vHGUz4WlxvE6KFodcgc4II5st6+hrkOC+zqkzx1c1hipnNdyQ58kkkbw4hgtk2O3f1rr1cUhERAEREAREQBERAEREAXhXq8KA/OXDfOudvwn2si7KFxDGkEg4RmDbmXF8N/r7uyfayLtGchvZHkvKxPGz6XDfp4GePhFUx6PxDc8A+vX1qzH8IsjOXTsdvLXlnqIctBULUVaqjXqLaRbLB0J7xXbsdvX8P6erYKYxSxmR8QLiWYABI1zruxAjIEaLLt3aERmmpDCPRhB43jPSLWsDw0jDa1zvXyuXVWdsj5hT9o+1qVuo4iTTuYMV8NpxcXB2u7derv7GV+24CxoMgDrAEWdkbZi5CpSbUg/xGrmJ8sz3D3lUZTqrY1mymrgIR2bOx/6tAf1rb+aN23Tj9aPBx8guEKzR+l2vP+6szsyKhG+5+inbThp6eia2NswlAIdxnIdYDE2wN+WdVzcPC+CjlnhLJH2kdhwFpFrDVxdrcG9hbNcTwTHzKu/C9jVLT0yrqVmloa8LgYTm1J3SPpVT8JTjcR0zRuL5Cf4Q0ea0dTwjqJdXNb0MbbzufWudjVyJY51pvmevTwWHhtBd+5dDycyST0m6p8Eh88Yfu1H9PKrkQyVLgmfnrOzUf08q5Q4zmOVqLS6PsfpfZH0EP7OP+QK2qex/oIf2cf8AIFcXqHygREQBERAEREAREQBRY66g591NgQEl4V6vCgPzhw4+vO7J9rIuzZyG9keS4zhx9ed2T7WRdmzkN7I8l5WJ42fTYX9PApVC09WtvULXTMz0u46D3n8/3yo2XsaGXVWtsH5hT9o+1qkrGOYbPAIO4DP/ADWvdS26AKGCxuMRz/EqfWtlFb+RTiXdU/3Lszi6hUpVdqFSlV1Mz1ysVKNRKlGtDPMjudtwVdeirvwvY1S0tMtzwS+pV34XsapaelGdlnq7I9LBcc/47F2FpJAGZVuLxWSmhDG4ja9tdRY5ZZgEWvcc9xZQx3JO8rNI9GMrstMKp8EvrrOzUf08quR6KnwS+us7NR/TyrtDjM+P/Kfk+x+ltj/QQ/s4/wCQK4qex/oIf2cf8gVxeqfJhEUCb9XmgJooW3KQKA9REQBYnOusjgotbvQBjVNEQBeFerk/hUlc3ZdTgeWEiNlwbHC+ZjHNvzXa4jqJQHxvhx9ed2T7WRdmzkN7I8lxnDdp+Ok2yIIB5riWS49YXZs5DeyPJeViuNn02F/TwKNQtfUSFpDxzZH+/cthULVVLrfnVZUbLXMVRMCBJIBz4W63POT4Ktt596GA2A9I6CwHylUqtQ8k5924DoVjbA+YU/bPtapbKTvfyKMRGyh+5dmcbUKlKrtQqUquplFcrFSjUSpR6rQzzI7na8EvqVd+F7GqVLZtm6mx59CCLaDcdDbnCu8EvqVd+F7GqWs+MF5uei5sLk21P5yVFXZHoYRXqTXl2LWPmF7Dfqea5/OSsRKnGrkKySPVRcj0VPgl9dZ2aj+nlVyPRU+CX11nZqP6eVTocZlx/wCU/J9j9KbDka6nhLSCOLYLg3zaA0jrBBHcry4H4HZCaerBdfDXVAAvyQRG6w3XLiesld8vUPkwoN3Ka8IQEVIBAF6gCIiAIiIAiIgC4b4UKeSeJlJGWh8xBaHEgHi5GOcSQDpl4hdytXtGjxTwyHDZrJW2Ot3mMgjqwHxQHzXaDGtkJnibJE+R7cLgb4g85g2y1Fj5LeRbLhlaOKeWG2TZBcfvD+61+0KavlgPxkFz2zMw/RX4tpxOaOL7sirmxKhuINJs7c70T4HVQnThPiRbSr1KfAypX8F6puYjxjexwd6sj6lym06WRnLjeztNc3zC+zQLNNStlFn3PeQsssDHkz0Kfxaa4op+33PzrKc1a2z9Qp+2fa1S+xV/AGlkuS97f9Mj+JvvXHbf4MxD5tj9CNoeHYAb4nynQOaBy9bqUMM4315FtT4pCplvFqzv7P7nx+cX6/P+/n166+VfR6ngzSg5ud/pu/8Asqj+D9EdXOv2Xi/8ZzU40pIhUx1KW1z50VkiHOe4b/7L6FHwc2bq7jD1B/8AzV+m2LsYH0oah/eR/wC1WZWY1Wjc0PBQ3oq78L2NUtNTFfWKPZlGyP5vSPbHJLGHh5eRKAyb0QXOdvINvtLcbO2LRuzZTsZ2RH54LqE6LkkaaOPhTlJ2bvbsfHqeNzuSCeoE+Svw0r9MJvu1PgM19hOxqcC/FA9Zc4eBNvUtLtEBoLWgNG5oDR4BRWEXNlk/jE/+Ipeev2OCfSygckNO9+X8A9K/XZXOCXB55kNQ2zmxNlxFxsfShe30GC/O4XudL9SsVrC42aLncF2PBamqY6CbimFtRiBYbMvYlt835aX1V0KUIcKPPr4qrW439ifwXwSU89TTvLbvkfUAAk+hIGWJuBYjIEL6UuQ4MbPn+MMqJ3AO+LOZI30cTpJJI34yGejkGWv0rr1MzhERAEREAREQBERAEREAWGWK7mm2gd4m3+yzIgNFUT3Fn2Dg4WysbXz8lN1BHILSMa4dI96xVsXynd7yrrRkq3PWxbkVk7lQbAaPopZYuhrsTR/kdcKYpKxvJmif+0jIPiwhWxO4dKkK3e3wK7mRzJI023GVcsPFPgYWufFidHIbholaT6FrnIb1odt1bHVEtHxFyIh8piONwa0PDS0DS55jddw+qa4YRcEkeaS2uW2Omt/cppkGrHxx2yKksbeF4OEXBFrGyov2HUf4Tl9jLhvHisZI3jxCXFvofHv+h1J/VOussXB+p/wnL63dv2h4r3E37Q8UuLfQ5qrqm0sNHEYMZk+04gxvsGkgWzPpHVR4P7NqWmYMhAZxrsBe4i7QGi9tTcg5+C7jJoaLXv0/m6wtmawkG+vWjYSuacbKqXcqSNg+6wk+LjZYHcGI9ZHveek4R4Bb51cOZp7zZYHyuO4KGdE1CRrotmRR8hjW92fir9DO1rHAEY75DePfzqODesNHF8oP838pXPEu9iTpWV2zb0kbsYeRa7M+ske4K8oxaDqCkrCkIiIAiIgCIiAIiiSgJIoYVJpQHqIiA1dTH6X53lWA1TkZmsmFQtqWKWhWLVB0at4VBzVzKdzFMxr1zbtHXv6Ss5apmPL89KKIcjWOhWMwrZmJRMS5lO5jW8QnELY8SnEruUZzDTs9F3d5FQbEr0ceR/O9REaOJxS1KoiUhErPEqQYuZTucrCNQgi9Lx8irvFryOPP87l1RDloWmaDqXq8C9VhSERRc6yAPd4r0LGBdZUAREQBQU14QgIqQCAL1AEREBAtXtlJEBErGc1lcF41qAg1ilZTRDtzHgXmBZUQXMWBMCyouC5jDVENWZeELouY8K9DVMBeoLkLIGqaILhERDhFzrKAF1kc26AIAAvURAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREB//Z"
+        alt=""
+      />
+      <h3 class="card-head">Drum</h3>
+      <p class="price">$800</p>
+      <p class="desc">
+        Drums are the world's oldest and most ubiquitous musical instruments,
+        and the basic design has remained virtually unchanged for thousands of
+        years.
+      </p>
+      <button class="add-to-cart"  id="card2">Add to Cart</button>
+      <button class="show-det" id="show2" >Show Details</button>
+
+    </div>
+    <div class="card">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNz7jJgVsIGCm7TGshFW-btKMaJ4alrWOYUQ&usqp=CAU"
+        alt=""
+      />
+      <h3 class="card-head">Oud</h3>
+      <p class="price">$2000</p>
+      <p class="desc">
+        denotes a thin piece of wood similar to the shape of a straw. It may
+        refer to the wooden plectrum traditionally used for playing the oud, to
+        the thin strips of wood used for the back .
+      </p>
+      <button class="add-to-cart"  id="card3">Add to Cart</button>
+      <button class="show-det" id="show3" >Show Details</button>
+
+    </div>
+    <div class="card">
+      <img
+        src="https://www.eskchat.com/wp-content/uploads/2018/01/%D8%A7%D9%84%D9%87%D8%A7%D8%B1%D8%A8.jpg"
+        alt=""
+      />
+      <h3 class="card-head">Harp</h3>
+      <p class="price">$2500</p>
+      <p class="desc">
+        The harp is a stringed musical instrument that has a number of
+        individual strings running at an angle to its soundboard; the strings
+        are plucked with the fingers.
+      </p>
+      <button class="add-to-cart"  id="card4">Add to Cart</button>
+      <button class="show-det" id="show4" >Show Details</button>
+
+    </div>
+
+    <div class="card">
+      <img
+        src="https://www.eskchat.com/wp-content/uploads/2018/01/%D8%A7%D9%84%D8%AF%D9%81-%D9%88%D8%A7%D9%84%D8%B1%D9%82-300x215.jpg"
+        alt=""
+      />
+      <h3 class="card-head">Tambourine</h3>
+      <p class="price">$750</p>
+      <p class="desc">
+        The tambourine is a musical instrument in the percussion family
+        consisting of a frame, often of wood or plastic, with pairs of small
+        metal jingles
+      </p>
+      <button class="add-to-cart"  id="card5">Add to Cart</button>
+      <button class="show-det" id="show5" >Show Details</button>
+
+    </div>
+
+    <div class="card">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA1oBJ5_ygxqkk0Y1_0XsK2dxHBGab2j6uWg&usqp=CAU"
+        alt=""
+      />
+
+      <h3 class="card-head">Trumpet</h3>
+      <p class="price">$1750</p>
+      <p class="desc">
+        The trumpet is a brass instrument commonly used in classical and jazz
+        ensembles .
+      </p>
+      <button class="add-to-cart"  id="card6">Add to Cart</button>
+      <button class="show-det" id="show6" >Show Details</button>
+
+    </div>
+  </div>
 </main>

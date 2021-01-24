@@ -1,18 +1,36 @@
-#aside{
-  position: absolute;
-  display: grid;
-  grid-row: 1fr 1fr 1fr;
-  row-gap:20px;
-  top: 150px;
-  left: 15px;
+.aside-container{
+
+  width: 100%;
+  background-color: var(--aside-background-color);
+  height: 100%;
+  color: white;
+  text-align: center;
   }
 
+  .instrument{
+    cursor: pointer;  
+  }
 
-#aside img{
-  border-radius: 15px;
-  display:block;
-  width: 55px;
-  box-shadow: 0 9px #999;
+  .instrument:hover{
+    width: 100%;
+  
+
+  }
+.instrument >img{
+  display: block;
+  margin:  auto;
+  padding:15px 15px;
+  border-radius: 5px;
+
 }
+
+.instrument >img:hover{
+  transition: 0.5s;
+
+  padding:15px 15px;
+  background-color: white;
+
+}
+
 
 

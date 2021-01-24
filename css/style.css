@@ -1,9 +1,25 @@
-:root {
-  --main-background-color: #1a1a1d;
-  --main-heading-text-color: #c3073f;
-  --border-color: white;
-  --box-shodow: 0px 0px 3px 5px #950740;
-  --main-text-color: white;
-  --header-background-color: #6f2232;
-  --footer-background-color: #6f2232;
+:root{
+
+    
+    --main-background-color:#1A1A1D;
+    --main-heading-text-color: #c3073F;
+    --border-color: white;
+    --box-shodow: 0px 0px 3px 5px  #950740;
+    --main-text-color: white;
+    --header-background-color: #6f2232;
+    --footer-background-color: #6f2232;
+
 }
+
+
+header{
+    
+    width: 100%;
+    height: auto;    
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
+

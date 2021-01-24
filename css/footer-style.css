@@ -3,22 +3,25 @@
   height: 100%;
   background-color: var(--footer-background-color);
   padding: 25px;
-  margin-top: 500px;
+  
 }
 
 .sociel-links {
   display: flex;
   justify-content: center;
+
 }
 
 .sociel-icon {
   font-size: 30px;
+  text-decoration: none;
 }
 
 .quick-links {
   margin-top: 25px;
   display: flex;
   justify-content: center;
+  
 }
 
 .copy-rights {

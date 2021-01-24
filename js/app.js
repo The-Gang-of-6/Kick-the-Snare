@@ -61,12 +61,14 @@ function changeMainSection(event) {
 
     };
 
-    document.body.appendChild(iframe).before(header)
-
     document.body.removeChild(aside)
     document.body.removeChild(footer)
+    document.body.removeChild(header)
 
+
+    document.body.appendChild(header)
     document.body.appendChild(aside)
+    document.body.appendChild(iframe)
     document.body.appendChild(footer)
 
 }

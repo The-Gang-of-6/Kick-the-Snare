@@ -24,13 +24,13 @@ function loadMainSection(event) {
 
 window.addEventListener('load', function () {
     var drumMachine = d.getElementById('drumMachine')
-    var sales = d.getElementById('sales')
+    var products = d.getElementById('products')
     var aboutUs = d.getElementById('aboutUs')
 
 
 
     drumMachine.addEventListener('click', changeMainSection)
-    sales.addEventListener('click', changeMainSection)
+    products.addEventListener('products', changeMainSection)
     aboutUs.addEventListener('click', changeMainSection)
 
 })

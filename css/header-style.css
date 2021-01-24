@@ -3,11 +3,11 @@ header{
   background-color: var(--header-background-color);
   box-shadow: var(--box-shodow);
 }
-nav{
+.header-nav{
   width:100%;
 }
 
-a{
+.header-nav a{
   color: var(--main-text-color);
   float: right;
   text-align: center;
@@ -20,17 +20,17 @@ a{
   transition-property: border;
   transition-duration: 0.5s;
 }
-a:hover{
+.header-nav a:hover{
   background-color: var(--main-text-color);
   color: var(--main-heading-text-color);
   border-radius: 10px;
 }
 
-img{
+.header-nav img{
   padding:5px;
 }
 
-h2{
+.header-nav h2{
   color: var(--main-text-color);
   font-family: 'Great Vibes', cursive;
   position: absolute;

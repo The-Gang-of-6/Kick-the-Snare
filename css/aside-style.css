@@ -1,0 +1,19 @@
+#aside{
+  position: absolute;
+  display: grid;
+  grid-row: 1fr 1fr 1fr;
+  row-gap:50px;
+  top: 250px;
+  
+  
+}
+
+
+
+#aside img{
+  display:block;
+  border: solid 0.5px var(--main-background-color);
+  width: 120px;
+}
+
+

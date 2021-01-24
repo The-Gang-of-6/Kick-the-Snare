@@ -1,7 +1,7 @@
 .drum-container{
-    display: flex;
-    justify-content: center;
+   
     width: 100%;
+    height: auto;
 }
 
 .panal-confiq{
@@ -15,112 +15,147 @@
 
 }
 
-/* The switch - the box around the slider */
+/* power switch */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-right: 50px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch .power {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.power-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.power-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.power-switch:checked + .power-slider {
+  background-color: var(--main-heading-text-color);
+}
+
+.power-switch:focus + .power-slider {
+  box-shadow: 0 0 1px var(--main-heading-text-color);
+}
+
+.power-switch:checked + .power-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
 
 
 
-  /* The slider */
-  .slider {
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
+/* volume slider */
+.volume-slider-container {
+  margin-left: 20px;
+  width: 170px;
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.volume-slider:hover {
+  opacity: 1;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--main-heading-text-color);
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background:var(--main-heading-text-color);
+  cursor: pointer;
+}
+
+/* drum */
+
+.drum{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-panal{
+  padding: 25px;
+  width: 30%;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns: auto auto auto;
+
+}
+
+.middle-panal{
+  padding: 25px;
+  width: 30%;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns: auto auto auto;
   
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: rgb(102, 25, 25);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .power:checked + .power {
-    background-color: #2196F3;
-  }
-  
-  .power:focus + .power {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  .power:checked + .power:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+}
+
+.right-panal{
+  padding: 25px;
+  width: 30%;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns:  auto auto auto;
+ 
+}
+
+.drum-key{
+  padding: 50px;
+  background: none; 
+  border: solid 0.5px var(--main-background-color);
+}
 
 
+.red-box-shadow:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shodow);
 
-  /* volum slider */
-
-
-  .slidecontainer {
-    width: 100px; /* Width of the outside container */
-  }
-  
-  /* The slider itself */
-  .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100px; /* Full-width */
-    height: 5px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-  }
-  
-  /* Mouse-over effects */
-  .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-  }
-  
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 5px; /* Set a specific slider handle width */
-    height:5px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 5px; /* Set a specific slider handle width */
-    height:5px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-  }
+}

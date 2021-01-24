@@ -1,6 +1,8 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
 :root {
   --font-hachi: "Hachi Maru Pop", cursive;
+
   --main-background-color: #1a1a1d;
   --main-heading-text-color: #c3073f;
   --border-color: white;

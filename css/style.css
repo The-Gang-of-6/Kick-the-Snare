@@ -1,11 +1,15 @@
 :root{
 
-    --main-bg-color: brown;
+    --main-background-color:#1A1A1D;
+    --main-heading-text-color: #c3073F;
+    --border-color: white;
+    --box-shodow: 0px 0px 3px 5px  #950740;
     --main-text-color: white;
+    --header-background-color: #6f2232;
+    --footer-background-color: #6f2232;
+
 
 }
 
 
-header{
-    color:(--main-text-color)
-}
+

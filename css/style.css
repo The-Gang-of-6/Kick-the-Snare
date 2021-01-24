@@ -1,11 +1,17 @@
 :root{
 
-    --main-bg-color: brown;
-    --main-text-color: white;
+    
 
 }
 
 
 header{
-    color:(--main-text-color)
+    
+    width: 100%;
+    height: auto;    
+}
+
+main{
+    width: 100%;
+    height: auto;
 }

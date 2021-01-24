@@ -1,25 +1,29 @@
-:root{
 
     
-    --main-background-color:#1A1A1D;
+    
+    
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+:root {
+  --font-hachi: "Hachi Maru Pop", cursive;
+
+ --main-background-color:#1A1A1D;
     --main-heading-text-color: #c3073F;
     --border-color: white;
     --box-shodow: 0px 0px 3px 5px  #950740;
     --main-text-color: white;
     --header-background-color: #6f2232;
     --footer-background-color: #6f2232;
+    --drum-machine-button-main-color:  #6f2232;
+    --drum-machine-button-second-color:  #c3073F;
 
 }
 
-
-header{
-    
-    width: 100%;
-    height: auto;    
+header {
+  width: 100%;
+  height: auto;
 }
 
-main{
-    width: 100%;
-    height: auto;
+main {
+  width: 100%;
+  height: auto;
 }
-

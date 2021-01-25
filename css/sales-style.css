@@ -8,7 +8,8 @@
   gap: 50px;
 }
 .card {
-  box-shadow: 0 0px 13px 0px rgba(255, 255, 255, 1), 0 0px 13px 0px rgba(255, 255, 255, 1),0 0px 13px 0px rgba(255, 255, 255, 1);
+  box-shadow: 0 0px 13px 0px rgba(255, 255, 255, 1),
+    0 0px 13px 0px rgba(255, 255, 255, 1), 0 0px 13px 0px rgba(255, 255, 255, 1);
   text-align: center;
   font-family: arial;
   width: 350px;
@@ -16,7 +17,9 @@
   border-radius: 5px;
   background-color: white;
 }
+
 .card .product-img { 
+
   margin-top: 20px;
   width: 300px;
   height: 300px;
@@ -43,8 +46,6 @@
   border-radius: 20px;
   margin-left: 25%;
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
-
-
 }
 
 .card .add-to-cart:hover,
@@ -59,11 +60,10 @@
   font-family: serif;
 }
 .card-head {
-  font-size:30px;
+  font-size: 30px;
   font-weight: bold;
-  color:var(--main-heading-text-color);
+  color: var(--main-heading-text-color);
   margin-top: 15px;
   text-indent: 5px;
   letter-spacing: 3px;
-
 }

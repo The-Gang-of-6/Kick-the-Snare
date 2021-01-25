@@ -7,7 +7,7 @@
   --font-hachi: "Hachi Maru Pop", cursive;
 
       --main-background-color:#1A1A1D;
-    --main-heading-text-color: #c3073F;
+    --main-heading-text-color: #dd1a55;
     --border-color: white;
     --box-shodow: 0px 0px 11px 2px #ccc;
     --main-text-color-white: white;
@@ -17,6 +17,7 @@
     --aside-background-color: #E12C2F;
     --drum-machine-button-main-color:  #c3073F;
     --drum-machine-button-second-color:  #36db30;
+    --inputHover-background-color:rgba(240, 234, 234, 0.966);
 
 }
 html

@@ -37,6 +37,7 @@ function createProduct(item) {
 
   mainContainer.appendChild(prodcutCard);
 }
+
 Products.prototype.id = 0;
 
 function Products(name, img, price) {

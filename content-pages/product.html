@@ -1,21 +1,27 @@
 <main id="main">
-  <div class="all-products">
-    <img src="https://placehold.it/150x150/ddd" alt="" />
-    <form action=""></form>
-    <label for="Quantity" class="labels">Quantity:</label>
-    <input type="number" name="Quantity" id="Quantity" />
-    <br />
-    <label for="price" class="labels">Price:100$</label>
-    <br />
-    <label for="Pay" class="labels">Payments</label>
-    <select id="pay" name="pay">
-      <option value="Cash">Cash</option>
-      <option value="Visa">Visa</option>
-      <option value="MasterCard">Master Card</option>
-      <option value="AmericanExpress">American Express</option>
-    </select>
-    <br />
-    <br />
-    <input type="button" value="Add to Cart" class="inputfield" />
+  <div class="product-details-container">
+    <div class="product-details">
+      <div class="prod-img">
+        <img
+          src="https://thumbs.static-thomann.de/thumb/orig/pics/bdb/403025/12258162_800.jpg"
+          alt="guitar"
+          class="img-info"
+        />
+      </div>
+      <div class="prod-det">
+        <h1>Oud</h1>
+
+        <p class="price-det">$<span>100</span></p>
+        <p class="info-det">Some text about the guitar</p>
+        <p class="condition-det">Condition:New</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+
+        <button class="new-in-cart">Add to Cart</button>
+      </div>
+    </div>
   </div>
 </main>

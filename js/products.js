@@ -1,7 +1,7 @@
 "use strict";
 var d = document;
 var products = []; //// array of obj
-var productsArray = [['Violin', '../img/violin.png','1400'],['Drum', '../img/drum.jpg', 800],['Oud', '../img/oud.png', 2000],['Harp','https://www.eskchat.com/wp-content/uploads/2018/01/%D8%A7%D9%84%D9%87%D8%A7%D8%B1%D8%A8.jpg',2500],['Tamborine','https://www.eskchat.com/wp-content/uploads/2018/01/%D8%A7%D9%84%D8%AF%D9%81-%D9%88%D8%A7%D9%84%D8%B1%D9%82-300x215.jpg' , 750],['Trumpet', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA1oBJ5_ygxqkk0Y1_0XsK2dxHBGab2j6uWg&usqp=CAU', 1750]];
+var productsArray = [['Violin', '../img/violin.png','1400'],['Drum', '../img/drum.jpg', 800],['Oud', '../img/oud.png', 2000],['Harp','../img/harp.png',2500],['Tamborine','../img/Tamborine.png' , 750],['Trumpet', '../img/Trumpet.jpg', 1750]];
 var mainContainer = d.getElementById("Products-container");
 
 function createProduct(item) {

@@ -76,43 +76,43 @@ var keyboardKeyCode = [
 
 
 var soundsUrl = [
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
+    '../audio/ekit-tom.wav',
+    '../audio/hats.wav',
+    '../audio/kick.wav',
+    '../audio/snare_rim.wav',
+    '../audio/snare.wav',
+    '../audio/vocal_dance.wav',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
+    '../audio/',
 ]
 
 
 var soundsName = [
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
+    'Ekit Tom',
+    'hats',
+    'kick',
+    'snare_rim',
+    'snare',
+    'vocal_dance',
     '',
     '',
     '',
@@ -168,7 +168,7 @@ keyboardKey.map((value, index) => {
 
 
 
-console.log(insturmentObjconatiner)
+alert(insturmentObjconatiner)
 
 
 

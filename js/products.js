@@ -1,5 +1,6 @@
 "use strict";
 var d = document;
+
 //items that user has chosen to add to cart
 var added_products = [];
 var products = []; //// array of obj
@@ -7,6 +8,7 @@ var productsArray = [['Violin', '../img/violin.png','1400'],['Drum', '../img/dru
 var mainContainer = d.getElementById("Products-container");
 var productAddToCart;
 function createProduct(item) {
+
   var prodcutCard = d.createElement("div");
   prodcutCard.setAttribute("class", "card");
 
@@ -54,14 +56,16 @@ function Products(name, img, price) {
   this.imgUrl = img;
   products.push(this);
   Products.prototype.id += 1;
-  createProduct(this);
+  createProducts(this);
 }
+
 
 var object ;
 for(var item=0; item<productsArray.length; item++){
 
     object = new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
     localStorage.setItem(object.id, JSON.stringify(object));
+
 }
 
 

@@ -31,7 +31,7 @@ function createProduct(item) {
 
   var productShowDetails = d.createElement("button");
   productShowDetails.setAttribute("class", "show-det");
-  productShowDetails.textContent = "Add To Cart";
+  productShowDetails.textContent = "Show Details";
 
   prodcutCard.appendChild(productShowDetails);
 

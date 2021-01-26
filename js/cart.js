@@ -1,9 +1,9 @@
 "use strict";
 
 var d = document;
-var cartContainer = d.getElementById("cart-container");
+var cartContainer = d.getElementById("cart-items-container");
 //cartContainer.innerHTML = "Nothing to show";
-var theadNames = ["Item Name", "Price", "Quantity", "Remove"];
+var theadNames = ["Item Name", "Item Image", "Price", "Quantity", "Remove/Update"];
 var instrumentsNames = [
   "Violin",
   "Drum",
@@ -46,8 +46,11 @@ function cartRender() {
     tableRow.setAttribute("class", "cart-row");
     //create the image and name column
     var tableColumn = d.createElement("td");
+    var tableColumn5 = d.createElement("td");
     //set the coulmn styling
     tableColumn.setAttribute("class", "cart-data");
+    tableColumn5.setAttribute("class", "cart-data");
+
     //create headerr to be added to the column as the name of the instrument
     var header4 = d.createElement("h4");
     header4.textContent = instrumentsNames[i];
@@ -56,16 +59,17 @@ function cartRender() {
     //add the path to source to get the image
 
     // edited the width and height for imges////////////////////////////////////////////////////////////////
-    img1.setAttribute("width", "150px");
-    img1.setAttribute("height", "100px");
+    img1.setAttribute("width", "50px");
+    img1.setAttribute("height", "30px");
     ////////////////////////////////////////////////////////////////////////////////
     img1.src = "../img/" + instrumentsImages[i];
     //add the header to the column
     tableColumn.appendChild(header4);
     //add the image to the column
-    tableColumn.appendChild(img1);
+    tableColumn5.appendChild(img1);
     //add the column to the row
     tableRow.appendChild(tableColumn);
+    tableRow.appendChild(tableColumn5);
 
     //create the second column that holds the price
     //create the price column
@@ -109,7 +113,7 @@ function cartRender() {
     //create te quantity input field
     var removeButton = d.createElement("button");
     removeButton.textContent = "Remove";
-    removeButton.setAttribute("class", "button-style");
+    removeButton.setAttribute("class", "button2-style");
     //add teh button to its column
     tableColumn4.appendChild(buyNowButton);
     tableColumn4.appendChild(removeButton);
@@ -123,6 +127,4 @@ function cartRender() {
 }
 cartRender();
 
-
 /// creating payment details function
-

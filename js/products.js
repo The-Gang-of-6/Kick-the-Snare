@@ -1,10 +1,19 @@
 "use strict";
+
 var d = document;
+
+
+
+//items that user has chosen to add to cart
+var added_products = [];
 var products = []; //// array of obj
-var productsArray = [['Violin', '../img/violin.png','1400'],['Drum', '../img/drum.jpg', 800],['Oud', '../img/oud.png', 2000],['Harp','../img/harp.png',2500],['Tamborine','../img/Tamborine.png' , 750],['Trumpet', '../img/Trumpet.jpg', 1750]];
-var mainContainer = d.getElementById("Products-container");
+var productsArray = [['Violin', '../img/violin.png', '1400'], ['Drum', '../img/drum.jpg', 800], ['Oud', '../img/oud.png', 2000], ['Harp', '../img/harp.png', 2500], ['Tamborine', '../img/Tamborine.png', 750], ['Trumpet', '../img/Trumpet.jpg', 1750]];
+var mainContainer = d.getElementById("products-container");
+var productAddToCart;
+
 
 function createProduct(item) {
+
   var prodcutCard = d.createElement("div");
   prodcutCard.setAttribute("class", "card");
 
@@ -23,9 +32,13 @@ function createProduct(item) {
   productPrice.textContent = "$" + item.price;
   prodcutCard.appendChild(productPrice);
 
-  var productAddToCart = d.createElement("button");
+  productAddToCart = d.createElement("button");
   productAddToCart.setAttribute("class", "add-to-cart");
+  productAddToCart.id = 'addToCartButton' + item.id;
+  productAddToCart.setAttribute('onclick', 'addItem(this.value)');
+  //productAddToCart.addEventListener('click', addItem);
   productAddToCart.value = item.id;
+  //console.log(productAddToCart.value);
   productAddToCart.textContent = "Add To Cart";
   prodcutCard.appendChild(productAddToCart);
 
@@ -36,7 +49,10 @@ function createProduct(item) {
   prodcutCard.appendChild(productShowDetails);
 
   mainContainer.appendChild(prodcutCard);
+
 }
+
+
 
 Products.prototype.id = 0;
 
@@ -50,14 +66,19 @@ function Products(name, img, price) {
   createProduct(this);
 }
 
-// var pro1 = new Products(
-//   "test",
-//   "https://www.eskchat.com/wp-content/uploads/2018/01/%D8%A7%D9%84%D9%87%D8%A7%D8%B1%D8%A8.jpg",
-//   100
-// );
 
-for(var item=0; item<productsArray.length; item++){
-    console.log(productsArray[item]);
-    new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
+var object;
+for (var item = 0; item < productsArray.length; item++) {
+
+  object = new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
+  localStorage.setItem(object.id, JSON.stringify(object));
+
+}
+
+
+function addItem(value) {
+  //productAddToCart.value;
+  added_products.push(value);
+  localStorage.setItem('items', JSON.stringify(added_products));
 }
 

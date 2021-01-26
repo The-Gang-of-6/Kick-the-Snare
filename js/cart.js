@@ -1,26 +1,35 @@
 "use strict";
-
 var d = document;
 var cartContainer = d.getElementById("cart-container");
-//cartContainer.innerHTML = "Nothing to show";
+var arrayOfObjects = [] ;
+var instrumentsNames =[];
+var instrumentsPrices = [];
+var instrumentsImages = [];
 var theadNames = ["Item Name", "Price", "Quantity", "Remove"];
-var instrumentsNames = [
-  "Violin",
-  "Drum",
-  "Oud",
-  "Harp",
-  "Tambourine",
-  "Trumpet",
-];
-var instrumentsPrices = [1400, 800, 2000, 2500, 750, 1750];
-var instrumentsImages = [
-  "violin.png",
-  "drum.jpg",
-  "oud.png",
-  "harp.png",
-  "Tamborine.png",
-  "trumpet.jpg",
-];
+//check if theres is any items that user added to cart
+if(localStorage.getItem('items') === null){
+  cartContainer.innerHTML = "Nothing to show";
+}
+else{
+  var items = JSON.parse(localStorage.getItem('items'));
+  for(var i=0; i<items.length ;i++){
+    arrayOfObjects.push(JSON.parse(localStorage.getItem(items[i]+'')));
+  }
+  
+  for(var i=0; i<arrayOfObjects.length; i++){
+    //console.log(arrayOfObjects[i]);
+  instrumentsNames.push(arrayOfObjects[i].name);
+  instrumentsPrices.push(Number(arrayOfObjects[i].price));
+  instrumentsImages.push(arrayOfObjects[i].imgUrl);
+}
+  cartRender();
+}//else
+
+
+
+
+
+
 
 function cartRender() {
   var productCartTable = d.createElement("table");
@@ -59,7 +68,7 @@ function cartRender() {
     img1.setAttribute("width", "150px");
     img1.setAttribute("height", "100px");
     ////////////////////////////////////////////////////////////////////////////////
-    img1.src = "../img/" + instrumentsImages[i];
+    img1.src = instrumentsImages[i];
     //add the header to the column
     tableColumn.appendChild(header4);
     //add the image to the column
@@ -89,6 +98,8 @@ function cartRender() {
     inputFiled.setAttribute("type", "number");
     //set the minimum value to be 0
     inputFiled.setAttribute("min", "0");
+    //set default value of quantity to be 1
+    inputFiled.value = 1;
     //add the input filed to the coulmn
     tableColumn3.appendChild(inputFiled);
 
@@ -121,7 +132,7 @@ function cartRender() {
 
   cartContainer.appendChild(productCartTable);
 }
-cartRender();
+
 
 
 /// creating payment details function

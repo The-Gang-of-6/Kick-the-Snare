@@ -1,28 +1,26 @@
 "use strict";
 var d = document;
+//this function will delete the item from the local storage
+//window.addEventListener("load", function () {
 
-var cartContainer = d.getElementById("cart-container");
-var arrayOfObjects = [] ;
-var instrumentsNames =[];
-var instrumentsPrices = [];
-var instrumentsImages = [];
-var theadNames = ["Item Name", "Price", "Quantity", "Remove"];
+
+//})
+
+var cartContainer = d.getElementById("cart-items-container");
+var arrayOfObjects = JSON.parse(localStorage.getItem('instruments'));
+var currentArrayOfObjects = [];
+console.log(arrayOfObjects);
+var theadNames = ["Item Name", 'Item Image', "Price", "Quantity", "Operation"];
 //check if theres is any items that user added to cart
-if(localStorage.getItem('items') === null){
+if (localStorage.getItem('items') === null) {
   cartContainer.innerHTML = "Nothing to show";
 }
-else{
+else {
   var items = JSON.parse(localStorage.getItem('items'));
-  for(var i=0; i<items.length ;i++){
-    arrayOfObjects.push(JSON.parse(localStorage.getItem(items[i]+'')));
+  for (var i = 0; i < items.length; i++) {
+    //arrayOfObjects.push(JSON.parse(localStorage.getItem(items[i] + '')));
+    currentArrayOfObjects.push(arrayOfObjects[items[i]]);
   }
-  
-  for(var i=0; i<arrayOfObjects.length; i++){
-    //console.log(arrayOfObjects[i]);
-  instrumentsNames.push(arrayOfObjects[i].name);
-  instrumentsPrices.push(Number(arrayOfObjects[i].price));
-  instrumentsImages.push(arrayOfObjects[i].imgUrl);
-}
   cartRender();
 }//else
 
@@ -51,7 +49,7 @@ function cartRender() {
   // productCartTable.appendChild(tableData);
   productCartTable.appendChild(tableRow);
 
-  for (i = 0; i < instrumentsNames.length; i++) {
+  for (i = 0; i < currentArrayOfObjects.length; i++) {
     var tableRow = d.createElement("tr");
     tableRow.setAttribute("class", "cart-row");
     //create the image and name column
@@ -63,16 +61,16 @@ function cartRender() {
 
     //create headerr to be added to the column as the name of the instrument
     var header4 = d.createElement("h4");
-    header4.textContent = instrumentsNames[i];
+    header4.textContent = currentArrayOfObjects[i].name;
     //create an image that holds the instrument image
     var img1 = d.createElement("img");
     //add the path to source to get the image
 
     // edited the width and height for imges////////////////////////////////////////////////////////////////
     img1.setAttribute("class", "img-style");
-    
+
     ////////////////////////////////////////////////////////////////////////////////
-    img1.src = instrumentsImages[i];
+    img1.src = currentArrayOfObjects[i].imgUrl;
     //add the header to the column
     tableColumn.appendChild(header4);
     //add the image to the column
@@ -88,7 +86,7 @@ function cartRender() {
     tableColumn2.setAttribute("class", "cart-data");
 
     //add the price as textContent
-    tableColumn2.textContent = "$" + instrumentsPrices[i];
+    tableColumn2.textContent = "$" + currentArrayOfObjects[i].price;
     //add the price colun the row
     tableRow.appendChild(tableColumn2);
 
@@ -109,11 +107,14 @@ function cartRender() {
     tableColumn3.appendChild(inputFiled);
 
     //crate the button the holds the buy operation
-    var buyNowButton = d.createElement("button");
-    buyNowButton.textContent = "Update";
-    buyNowButton.setAttribute("class", "button-style");
+    var updateButton = d.createElement("button");
+    updateButton.textContent = "Update";
+    updateButton.setAttribute("class", "button-style");
+    updateButton.id = 'updateItem' + i;
+    updateButton.value = i;
+    updateButton.setAttribute('onclick', 'updateStorage(this.value, quantity)');
     //add it to its column parent
-    // tableColumn4.appendChild(buyNowButton);
+    // tableColumn4.appendChild(updateButton);
     //add the third column to the row
     tableRow.appendChild(tableColumn3);
 
@@ -126,8 +127,11 @@ function cartRender() {
     var removeButton = d.createElement("button");
     removeButton.textContent = "Remove";
     removeButton.setAttribute("class", "button2-style");
-    //add teh button to its column
-    tableColumn4.appendChild(buyNowButton);
+    removeButton.setAttribute('onclick', 'removeStorage(this.value)');
+    removeButton.id = 'removeItem' + i;
+    removeButton.value = i;
+    //add the button to its column
+    //tableColumn4.appendChild(updateButton);
     tableColumn4.appendChild(removeButton);
     //add the column to the row
     tableRow.appendChild(tableColumn4);
@@ -138,5 +142,24 @@ function cartRender() {
   cartContainer.appendChild(productCartTable);
 }
 
+//this function will upadte the quantity in the local storage
+// function updateStorage(value, quantity){
+//   localStorage.setItem(currentArrayOfObjects[value], JSON.stringify(quantity));
+// }
 
-/// creating payment details function
+function removeStorage(value) {
+  var arr = [];
+  if (items.length == 1) {
+    localStorage.removeItem('items');
+  } else {
+
+
+    for (var i = 0; i < items.length; i++) {
+      if (i == value) {
+        continue;
+      }
+      arr.push(i+'');
+      localStorage.setItem('items', JSON.stringify(arr));
+    }
+  }
+}

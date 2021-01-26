@@ -5,12 +5,12 @@ var d = document;
 
 // AutoLoad html files into index  page
 var headerIframe = d.getElementById('header-iframe')
-var asideIframe = d.getElementById('aside-iframe')
+// var asideIframe = d.getElementById('aside-iframe')
 var mainIframe = d.getElementById('main-iframe')
 var footerIframe = d.getElementById('footer-iframe')
 
 headerIframe.addEventListener('load', loadMainSection)
-asideIframe.addEventListener('load', loadMainSection)
+// asideIframe.addEventListener('load', loadMainSection)
 mainIframe.addEventListener('load', loadMainSection)
 footerIframe.addEventListener('load', loadMainSection)
 
@@ -61,13 +61,13 @@ function changeMainSection(event) {
 
     };
 
-    document.body.removeChild(aside)
+    // document.body.removeChild(aside)
     document.body.removeChild(footer)
     document.body.removeChild(header)
 
 
     document.body.appendChild(header)
-    document.body.appendChild(aside)
+    // document.body.appendChild(aside)
     document.body.appendChild(iframe)
     document.body.appendChild(footer)
 

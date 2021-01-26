@@ -39,6 +39,7 @@
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+
 }
 
 .power-slider:before {
@@ -67,6 +68,14 @@
   transform: translateX(26px);
 }
 
+
+.power-slider.round {
+  border-radius: 34px;
+}
+
+.power-slider.round:before {
+  border-radius: 50%;
+}
 
 
 /* volume slider */
@@ -216,7 +225,6 @@
 .drum-samples-container{
   display: block;
   margin: auto;
-  background-color: white;
   width: 30%;
   height: 160px;
   margin-bottom: 20px;
@@ -228,16 +236,16 @@
   font-size: 32px;
 }
 
-.audio-sample:hover{
-  color: var(--main-text-color-white);
-  font-size: 32px;
-  background-color: rgb(250, 208, 20);
-  transition: 0.3s;
-}
-
-.audio-sample > i ,  .audio-sample >span{
-
- padding: 10px;
+.audio-sample > audio{
+  width: 100%;
+ padding: 10px 0px;
  cursor: pointer;
 
 }
+
+.audio-sample:hover >audio{
+  color: var(--main-text-color-white);
+  font-size: 32px;
+  transition: 0.3s;
+}
+

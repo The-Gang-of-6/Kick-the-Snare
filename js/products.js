@@ -1,19 +1,14 @@
 "use strict";
 var d = document;
-var mainContainer = d.getElementById("products-container");
 
+//items that user has chosen to add to cart
+var added_products = [];
 var products = []; //// array of obj
-var productsArray = [
-  ['Violin', '../img/violin.png', '1400'],
-  ['Drum', '../img/drum.jpg', 800],
-  ['Oud', '../img/oud.png', 2000],
-  ['Harp', '../img/harp.png', 2500],
-  ['Tamborine', '../img/Tamborine.png', 750],
-  ['Trumpet', '../img/Trumpet.jpg', 1750]
-];
+var productsArray = [['Violin', '../img/violin.png','1400'],['Drum', '../img/drum.jpg', 800],['Oud', '../img/oud.png', 2000],['Harp','../img/harp.png',2500],['Tamborine','../img/Tamborine.png' , 750],['Trumpet', '../img/Trumpet.jpg', 1750]];
+var mainContainer = d.getElementById("Products-container");
+var productAddToCart;
+function createProduct(item) {
 
-
-function createProducts(item) {
   var prodcutCard = d.createElement("div");
   prodcutCard.setAttribute("class", "card");
 
@@ -32,9 +27,13 @@ function createProducts(item) {
   productPrice.textContent = "$" + item.price;
   prodcutCard.appendChild(productPrice);
 
-  var productAddToCart = d.createElement("button");
+  productAddToCart = d.createElement("button");
   productAddToCart.setAttribute("class", "add-to-cart");
+  productAddToCart.id = 'addToCartButton';
+  productAddToCart.setAttribute('onclick', 'addItem(this.value)');
+  //productAddToCart.addEventListener('click', addItem);
   productAddToCart.value = item.id;
+  //console.log(productAddToCart.value);
   productAddToCart.textContent = "Add To Cart";
   prodcutCard.appendChild(productAddToCart);
 
@@ -45,6 +44,7 @@ function createProducts(item) {
   prodcutCard.appendChild(productShowDetails);
 
   mainContainer.appendChild(prodcutCard);
+  
 }
 
 Products.prototype.id = 0;
@@ -59,8 +59,18 @@ function Products(name, img, price) {
   createProducts(this);
 }
 
-for (var item = 0; item < productsArray.length; ++item) {
-  // console.log(productsArray[item]);
-  new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
+
+var object ;
+for(var item=0; item<productsArray.length; item++){
+
+    object = new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
+    localStorage.setItem(object.id, JSON.stringify(object));
+
 }
 
+
+function addItem(value){
+  //productAddToCart.value;
+  added_products.push(value);
+  localStorage.setItem('items' , JSON.stringify(added_products));
+}

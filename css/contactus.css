@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100&family=Josefin+Sans:ital@0;1&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100&display=swap'); */
+
+
+.contactus-container {
+  background-color: #f1f1f1;
+}
+.contact-us-control {
+  width:80%;
+  height: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.contact-us-hero {
+  display: flex;
+  justify-content: center;
+  height: 20%;
+}
+.cont-head {
+  padding: 15px 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 72px;
+  color: #504c4c;
+}
+.left-side {
+  padding: 35px;
+
+  width: 50%;
+}
+.right-side {
+  padding: 35px;
+  width: 50%;
+} 
+.social-media{
+    cursor: pointer;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-text-color-white);
+}
+.social-link {
+  font-size: 30px;
+  text-decoration: none;
+  padding: 5px;
+  color:#a12559;
+  border-radius: 5px;
+}
+input[type="text"],
+textarea {
+  width: 50%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+  /* box-sizing: content-box; */
+  margin-top: 6px;
+  margin-bottom: 10px;
+  /* display:block; */
+  /* resize: vertical; */
+}
+
+input[type="submit"] {
+  background-color: #a12559;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/*
+input[type=submit]:hover {
+background-color: #863043;
+} */
+.inputdiv {
+  display: flex;
+  /* padding:20px ; */
+  justify-content: center;
+}
+.fname{
+    /* padding:15px; */
+    margin:10px;
+    margin-right: 20px;
+}
+.lname{
+    margin-right: 20px;
+    border-radius: 4px;;
+}
+.fa fa-map-marker-alt{
+background-color: pink;
+margin: 0 5px 0 0;
+}
+.par{
+    font-size:20px;
+    padding-top:15px;
+    font-family: serif;
+}
+.left-side >i{
+    font-size: 15px;
+    /* font-weight: bold; */
+    font-family:'Josefin Sans', sans-serif;
+    /* font-family: 'Imbue', serif; */
+
+    padding-right: 15px;
+}
+/* .fa fa-phone{
+    color:pink;
+} */
+.map >i{
+    color:rgb(221, 21, 121);
+}

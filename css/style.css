@@ -12,7 +12,7 @@
     --box-shodow: 0px 0px 11px 2px #ccc;
     --main-text-color-white: white;
     --main-text-color-black: black;
-    --header-background-color: #E12C2F;
+    --header-background-color: #f74144;
     --footer-background-color: #020202;
     --aside-background-color: #E12C2F;
     --drum-machine-button-main-color:  #c3073F;
@@ -52,6 +52,7 @@ main {
   height: 100%;
   min-height: 100%;
   grid-area: main;
+  
 }
 
 footer {

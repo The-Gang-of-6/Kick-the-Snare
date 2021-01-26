@@ -4,10 +4,10 @@ var d = document;
 //items that user has chosen to add to cart
 var added_products = [];
 var products = []; //// array of obj
-var productsArray = [['Violin', '../img/violin.png','1400'],['Drum', '../img/drum.jpg', 800],['Oud', '../img/oud.png', 2000],['Harp','../img/harp.png',2500],['Tamborine','../img/Tamborine.png' , 750],['Trumpet', '../img/Trumpet.jpg', 1750]];
-var mainContainer = d.getElementById("Products-container");
+var productsArray = [['Violin', '../img/violin.png', '1400'], ['Drum', '../img/drum.jpg', 800], ['Oud', '../img/oud.png', 2000], ['Harp', '../img/harp.png', 2500], ['Tamborine', '../img/Tamborine.png', 750], ['Trumpet', '../img/Trumpet.jpg', 1750]];
+var mainContainer = d.getElementById("products-container");
 var productAddToCart;
-function createProduct(item) {
+function createProducts(item) {
 
   var prodcutCard = d.createElement("div");
   prodcutCard.setAttribute("class", "card");
@@ -44,7 +44,7 @@ function createProduct(item) {
   prodcutCard.appendChild(productShowDetails);
 
   mainContainer.appendChild(prodcutCard);
-  
+
 }
 
 Products.prototype.id = 0;
@@ -60,17 +60,17 @@ function Products(name, img, price) {
 }
 
 
-var object ;
-for(var item=0; item<productsArray.length; item++){
+var object;
+for (var item = 0; item < productsArray.length; item++) {
 
-    object = new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
-    localStorage.setItem(object.id, JSON.stringify(object));
+  object = new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
+  localStorage.setItem(object.id, JSON.stringify(object));
 
 }
 
 
-function addItem(value){
+function addItem(value) {
   //productAddToCart.value;
   added_products.push(value);
-  localStorage.setItem('items' , JSON.stringify(added_products));
+  localStorage.setItem('items', JSON.stringify(added_products));
 }

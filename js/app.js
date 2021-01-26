@@ -47,7 +47,7 @@ function changeMainSection(event) {
 
     var header = d.getElementById("header")
     var footer = d.getElementById("footer")
-    var aside = d.getElementById("aside")
+    // var aside = d.getElementById("aside")
 
 
     var iframe = d.createElement('iframe')

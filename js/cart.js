@@ -59,8 +59,8 @@ function cartRender() {
     //add the path to source to get the image
 
     // edited the width and height for imges////////////////////////////////////////////////////////////////
-    img1.setAttribute("width", "50px");
-    img1.setAttribute("height", "30px");
+    img1.setAttribute("class", "img-style");
+    
     ////////////////////////////////////////////////////////////////////////////////
     img1.src = "../img/" + instrumentsImages[i];
     //add the header to the column

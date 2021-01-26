@@ -1,10 +1,19 @@
 "use strict";
 var d = document;
-var products = []; //// array of obj
-var productsArray = [['Violin', '../img/violin.png','1400'],['Drum', '../img/drum.jpg', 800],['Oud', '../img/oud.png', 2000],['Harp','../img/harp.png',2500],['Tamborine','../img/Tamborine.png' , 750],['Trumpet', '../img/Trumpet.jpg', 1750]];
-var mainContainer = d.getElementById("Products-container");
+var mainContainer = d.getElementById("products-container");
 
-function createProduct(item) {
+var products = []; //// array of obj
+var productsArray = [
+  ['Violin', '../img/violin.png', '1400'],
+  ['Drum', '../img/drum.jpg', 800],
+  ['Oud', '../img/oud.png', 2000],
+  ['Harp', '../img/harp.png', 2500],
+  ['Tamborine', '../img/Tamborine.png', 750],
+  ['Trumpet', '../img/Trumpet.jpg', 1750]
+];
+
+
+function createProducts(item) {
   var prodcutCard = d.createElement("div");
   prodcutCard.setAttribute("class", "card");
 
@@ -47,17 +56,11 @@ function Products(name, img, price) {
   this.imgUrl = img;
   products.push(this);
   Products.prototype.id += 1;
-  createProduct(this);
+  createProducts(this);
 }
 
-// var pro1 = new Products(
-//   "test",
-//   "https://www.eskchat.com/wp-content/uploads/2018/01/%D8%A7%D9%84%D9%87%D8%A7%D8%B1%D8%A8.jpg",
-//   100
-// );
-
-for(var item=0; item<productsArray.length; item++){
-    console.log(productsArray[item]);
-    new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
+for (var item = 0; item < productsArray.length; ++item) {
+  // console.log(productsArray[item]);
+  new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
 }
 

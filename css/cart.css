@@ -1,122 +1,143 @@
-/* .cart-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
-  margin-bottom: 200px;
-}
-.cart {
-  display: inline-block;
-  align-items: center;
-  margin-top: 2px;
-  margin-bottom: 200px;
-}
-.img-name {
-  justify-content: right;
-} */
+
 
 .cart-container {
-  width: 60%;
+  width: 100%;
   /* height: 60%; */
-  display: block;
+  display: flex;
 
-  margin: 0 auto;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* margin-top: 25px;
-  margin-left: 200px;
-  margin-bottom: 200px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-items-container {
+  overflow-y: auto;
   background-color: white;
+
   border-collapse: collapse;
   border: 1px solid #1a1a1d;
   padding: 10px;
   text-align: center;
-  border-color: solid black;
+  /* border-color: solid black; */
+  overflow-y: auto;
+  height: 400px;
+  width: 50%;
+  margin-top: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 4px 3px 1px rgba(255, 254, 254, 0.144);
+
 }
 
 .cart-header,
 .cart-data {
   border: 1px solid black;
-  padding: 10px;
+  padding: 1px;
   text-align: center;
   /* border-color: solid black; */
 }
 
 table {
   width: 100%;
-  
+  height: 100%;
 }
-td,
+
 th,
 table {
-  border: 2px solid rgb(124, 34, 34);
-  padding: 30px;
+  border: 1px solid black;
   text-align: center;
-  
 }
 .button-style {
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  display: block;
+  text-align: center;
+  display: inline-block;
+  
   border: none;
   margin-top: 10px;
   outline: 0;
-  padding: 12px;
+  padding: 2px;
   color: white;
-  background-color: var(--main-heading-text-color);
-  text-align: center;
+  background-color: #33cf55;  text-align: left;
   cursor: pointer;
-  width: 70%;
+  width: 50px;
   font-size: 15px;
-  border-radius: 10px;
-  margin-left: 25%;
+  border-radius: 5px;
+  margin-left: 5%;
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
 }
-.button-style:hover {
-  
-  background-color: #f3366f;
-  
+.button2-style{
+  border: none;
+  background-color: var(--header-background-color);
+  display: inline-block;
+  /* align-items: right; */
+  text-align: center;
+  width: 50px;
+  /* margin-right: 5%; */
+  padding: 2px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
 }
-#payment-details{
+.button2-style:hover{
+  background-color: #fd6e71;
+}
+.button-style:hover {
+  background-color: #10f541;
+}
+#payment-details {
   background-color: white;
-  width: 30%;
-  display: block;
+  /* width: 30%;
+  display: block; */
   margin: 0 auto;
   border: 1px solid #1a1a1d;
   padding: 10px;
+  margin-top: 10%;
   text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 4px 3px 1px rgba(255, 254, 254, 0.144);
 }
-.form-button{
+.form-button {
   width: 50%;
   background-color: #33cf55;
+  border-radius: 15%;
+  color: white;
 }
-.form-button:hover{
+.form-button:hover {
   background-color: #10f541;
   transition: 0.3s;
 }
-.form-input:hover{
-background-color: var(--inputHover-background-color);
+.form-input:hover {
+  background-color: var(--inputHover-background-color);
 }
-.form-label{
+.form-label {
   color: white;
-  background-color: var(--main-heading-text-color);
+  /* background-color: var(--main-heading-text-color); */
   width: 40%;
   height: 10%;
   display: block;
   margin: 0 auto;
-  border: 1px solid #1a1a1d;
-  padding: 10px;
-  text-align: center;
+  /* border: 1px solid #1a1a1d; */
+  
+  text-align: left;
+  color: #1a1a1d;
 }
-.form-label:hover{
-  background-color: #f3366f;
-}
-fieldset{
+
+fieldset {
   height: 100%;
-  color:var(--main-heading-text-color) ;
-    border: 2px solid var(--main-heading-text-color);
-    font-family: 'Lobster', cursive;
-    
-    font-weight: lighter;
+  color: var(--main-heading-text-color);
+  border: 2px solid var(--main-heading-text-color);
+  font-family: "Lobster", cursive;
+padding: 10px;
+  font-weight: lighter;
+  overflow-y: auto;
+}
+.form-div {
+  display: inline-block;
+  overflow-y: auto;
+  height: 400px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 30%;
+  margin-left: 10px;
 }

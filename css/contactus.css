@@ -4,19 +4,31 @@
 
 
 .contactus-container {
+  display: flex;
+  margin: 0 auto;
+  width:100%;
+  height: 100%;
+  justify-content: center;
+
+  align-items: center;
+
+}
+.inner-container{
+  border-radius: 5px;
   background-color: #f1f1f1;
 }
 .contact-us-control {
-  width:80%;
-  height: 100%;
+
+ 
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-us-hero {
-  display: flex;
-  justify-content: center;
-  height: 20%;
+  text-align: center;
+  vertical-align: middle;
+ 
 }
 .cont-head {
   padding: 15px 15px;
@@ -70,6 +82,7 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 150px;
 }
 /*
 input[type=submit]:hover {
@@ -82,12 +95,13 @@ background-color: #863043;
 }
 .fname{
     /* padding:15px; */
-    margin:10px;
-    margin-right: 20px;
+  
 }
 .lname{
-    margin-right: 20px;
-    border-radius: 4px;;
+  margin-left: 20px;
+}
+.email{
+  margin-left: 20px;
 }
 .fa fa-map-marker-alt{
 background-color: pink;

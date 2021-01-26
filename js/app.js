@@ -15,7 +15,7 @@ footerIframe.addEventListener('load', loadMainSection)
 
 
 headerIframe.addEventListener("load", loadMainSection);
-asideIframe.addEventListener("load", loadMainSection);
+// asideIframe.addEventListener("load", loadMainSection);
 mainIframe.addEventListener("load", loadMainSection);
 footerIframe.addEventListener("load", loadMainSection);
 
@@ -47,9 +47,9 @@ function changeMainSection(event) {
   var main = d.getElementById("main");
   main.remove();
 
-    var header = d.getElementById("header")
-    var footer = d.getElementById("footer")
-    // var aside = d.getElementById("aside")
+  var header = d.getElementById("header")
+  var footer = d.getElementById("footer")
+  // var aside = d.getElementById("aside")
 
   var iframe = d.createElement("iframe");
 
@@ -62,25 +62,25 @@ function changeMainSection(event) {
     this.remove();
   };
 
-    iframe.onload = function () {
+  iframe.onload = function () {
 
-        this.before((this.contentDocument.body || this.contentDocument).children[0]);
-        this.remove()
+    this.before((this.contentDocument.body || this.contentDocument).children[0]);
+    this.remove()
 
-    };
+  };
 
-    // document.body.removeChild(aside)
-    document.body.removeChild(footer)
-    document.body.removeChild(header)
+  // document.body.removeChild(aside)
+  document.body.removeChild(footer)
+  document.body.removeChild(header)
 
 
-    document.body.appendChild(header)
-    // document.body.appendChild(aside)
-    document.body.appendChild(iframe)
-    document.body.appendChild(footer)
+  document.body.appendChild(header)
+  // document.body.appendChild(aside)
+  document.body.appendChild(iframe)
+  document.body.appendChild(footer)
 
   document.body.appendChild(header);
-  document.body.appendChild(aside);
+  // document.body.appendChild(aside);
   document.body.appendChild(iframe);
   document.body.appendChild(footer);
 }

@@ -1,5 +1,8 @@
 "use strict";
+
 var d = document;
+
+
 
 //items that user has chosen to add to cart
 var added_products = [];
@@ -7,7 +10,9 @@ var products = []; //// array of obj
 var productsArray = [['Violin', '../img/violin.png', '1400'], ['Drum', '../img/drum.jpg', 800], ['Oud', '../img/oud.png', 2000], ['Harp', '../img/harp.png', 2500], ['Tamborine', '../img/Tamborine.png', 750], ['Trumpet', '../img/Trumpet.jpg', 1750]];
 var mainContainer = d.getElementById("products-container");
 var productAddToCart;
-function createProducts(item) {
+
+
+function createProduct(item) {
 
   var prodcutCard = d.createElement("div");
   prodcutCard.setAttribute("class", "card");
@@ -29,7 +34,7 @@ function createProducts(item) {
 
   productAddToCart = d.createElement("button");
   productAddToCart.setAttribute("class", "add-to-cart");
-  productAddToCart.id = 'addToCartButton';
+  productAddToCart.id = 'addToCartButton' + item.id;
   productAddToCart.setAttribute('onclick', 'addItem(this.value)');
   //productAddToCart.addEventListener('click', addItem);
   productAddToCart.value = item.id;
@@ -47,6 +52,8 @@ function createProducts(item) {
 
 }
 
+
+
 Products.prototype.id = 0;
 
 function Products(name, img, price) {
@@ -56,7 +63,7 @@ function Products(name, img, price) {
   this.imgUrl = img;
   products.push(this);
   Products.prototype.id += 1;
-  createProducts(this);
+  createProduct(this);
 }
 
 
@@ -74,3 +81,4 @@ function addItem(value) {
   added_products.push(value);
   localStorage.setItem('items', JSON.stringify(added_products));
 }
+

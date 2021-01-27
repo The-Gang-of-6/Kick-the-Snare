@@ -50,3 +50,7 @@ header{
   height: 60px;
  
 }
+
+.remove-it{
+  display: none;
+}

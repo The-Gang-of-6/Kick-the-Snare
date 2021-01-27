@@ -5,7 +5,7 @@ window.addEventListener('load', function () {
     var d = document;
 
     var keyTrigger = d.body.addEventListener("keypress", playIt)
-
+    var showPressedKey = d.getElementById("showPressedKey");
 
     var power = d.getElementById("power-switch")
     var volume = d.getElementById("volume")
@@ -71,33 +71,9 @@ window.addEventListener('load', function () {
     volume.addEventListener("change", playIt);
     volume.addEventListener("change", changeVolume);
 
-    keyboardButtonKeyId = ["key1",
-        "key2",
-        "key3",
-        "key4",
-        "key5",
-        "key6",
-        "key7",
-        "key8",
-        "key9",
-        "key10",
-        "key11",
-        "key12",
-        "key13",
-        "key14",
-        "key15",
-        "key16",
-        "key17",
-        "key18",
-        "key19",
-        "key20",
-        "key21",
-        "key22",
-        "key23",
-        "key24",
-        "key25",
-        "key26",
-        "key27",
+    keyboardButtonKeyId = ["key1", "key2", "key3", "key4", "key5", "key6", "key7", "key8", "key9", "key10",
+        "key11", "key12", "key13", "key14", "key15", "key16", "key17", "key18", "key19", "key20", "key21",
+        "key22", "key23", "key24", "key25", "key26", "key27",
     ]
 
 
@@ -198,18 +174,39 @@ window.addEventListener('load', function () {
     // keyboardKey.map((value, index) => {
     //     console.log(insturmentObjconatiner[index])
     // })
-    var audio = null
+    var audio1 = null
+    var audio2 = null
     function playIt(event) {
         if (!power.checked) {
-            audio.remove();
-            audio = null
+            try {
+                audio1.remove();
+                audio1 = null
+            } catch (e) {
+
+            }
+
+            try {
+                audio2.remove();
+                audio2 = null
+            } catch (e) {
+
+            }
+            showPressedKey.innerHTML = "The Panal Is Off"
+
         }
 
         if (power.checked && event.target.id != "volume") {
-            if (audio != null) {
+            if (audio1 != null || audio2 != null) {
                 try {
-                    audio.remove();
-                    audio = null
+                    audio1.remove();
+                    audio1 = null
+                } catch (e) {
+
+                }
+
+                try {
+                    audio2.remove();
+                    audio2 = null
                 } catch (e) {
 
                 }
@@ -217,21 +214,30 @@ window.addEventListener('load', function () {
             }
             insturmentObjconatiner.map((value, index) => {
                 if (event.target.id == insturmentObjconatiner[index].keyboardButtonKeyId) {
-                    audio = new Audio(insturmentObjconatiner[index].soundUrl)
-                    audio.volume = insturment.prototype.volume / 100;
-                    audio.play()
+                    audio1 = new Audio(insturmentObjconatiner[index].soundUrl)
+                    audio1.volume = insturment.prototype.volume / 100;
+                    audio1.play()
+                    audio1.remove();
+                    audio1 = null
+                    showPressedKey.innerHTML = ""
+                    showPressedKey.innerHTML = insturmentObjconatiner[index].sound
                 }
 
                 if (event.keyCode == insturmentObjconatiner[index].keyboardKeyCodeUpperCase || event.keyCode == insturmentObjconatiner[index].keyboardKeyCodeLowerCase) {
                     var buttonPressed = d.getElementById(insturmentObjconatiner[index].keyboardButtonKeyId)
                     buttonPressed.classList.add("drum-key-keyboard-clicked");
-                    audio = new Audio(insturmentObjconatiner[index].soundUrl)
-                    audio.volume = insturment.prototype.volume / 100;
-                    audio.play()
+                    audio2 = new Audio(insturmentObjconatiner[index].soundUrl)
+                    audio2.volume = insturment.prototype.volume / 100;
+                    audio2.play()
                     setInterval(() => {
                         buttonPressed.classList.remove("drum-key-keyboard-clicked")
                     }, 400);
+                    audio1.remove();
+                    audio1 = null
+                    showPressedKey.innerHTML = ""
+                    showPressedKey.innerHTML = insturmentObjconatiner[index].sound
                 }
+
             })
         }
 

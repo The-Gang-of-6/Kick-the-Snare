@@ -22,8 +22,7 @@
 
  
   display: flex;
-  justify-content: center;
-  align-items: center;
+ 
   margin: 30px 0px;
 }
 
@@ -47,7 +46,7 @@
   width: 50%;
 }
 .right-side {
-  padding: 35px;
+  padding: 0 39px;
   width: 50%;
 } 
 .social-media{
@@ -65,20 +64,32 @@
   color:#F74144;
   border-radius: 5px;
 }
-.contact-us-input,
-textarea {
+
+.textarea-box {
+
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 200px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.contact-us-input{
   width: 50%;
   padding: 7px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  
   /* box-sizing: border-box; */
   /* box-sizing: content-box; */
   margin-top: 6px;
   margin-bottom: 10px;
   /* display:block; */
   /* resize: vertical; */
-}
 
+}
 input[type="submit"] {
   background-color: #F74144;
   color: white;
@@ -88,6 +99,7 @@ input[type="submit"] {
   cursor: pointer;
   width: 150px;
   outline: none;
+  float: right;
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -105,19 +117,19 @@ input[type=submit]:hover {
 background-color: #863043;
 } */
 .inputdiv {
-  display: flex;
-  /* padding:20px ; */
-  justify-content: center;
+ 
 }
 .fname{
     /* padding:15px; */
+    width: 92%;
   
 }
 .lname{
   margin-left: 20px;
+  width: 92%;
 }
 .email{
-  margin-left: 20px;
+  width: 100%;
 }
 .fa fa-map-marker-alt{
 background-color: pink;

@@ -61,7 +61,7 @@
   color:#a12559;
   border-radius: 5px;
 }
-input[type="text"],
+.contact-us-input,
 textarea {
   width: 50%;
   padding: 7px;

@@ -66,14 +66,11 @@ function Products(name, img, price) {
   createProduct(this);
 }
 
-
-var object;
+//create the products objects
 for (var item = 0; item < productsArray.length; item++) {
-
-  object = new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
-  localStorage.setItem(object.id, JSON.stringify(object));
-
+  new Products(productsArray[item][0], productsArray[item][1], productsArray[item][2]);
 }
+localStorage.setItem('instruments', JSON.stringify(products));
 
 
 function addItem(value) {

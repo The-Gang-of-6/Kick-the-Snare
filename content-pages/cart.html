@@ -4,25 +4,27 @@
     <div class="form-div">
       <form action="" id="payment-details">
         <fieldset>
-          <legend>Payment Details $$</legend>
-          <label class="form-label" for="">CARD NUMBER     <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-paypal"></i></label>
-          <input
-            class="form-input"
-            type="text"
-            min="0"
-            placeholder="Valid Card Number"
-          />
+          <legend><img class="accepted-card" src="../img/visa.png" alt="visa">
+            <img class="accepted-card" src="../img/mastercard.png" alt="mastercard">
+            <img class="accepted-card" src="../img/discover.png" alt="discover">
+          </legend>
+          <label class="form-label" for="">CARD NUMBER
+          </label>
+
+          <input class="form-input" type="text" min="0" placeholder="Valid Card Number" />
           <br /><br />
           <label class="form-label" for="">EXPIRAITION DATE</label>
-          <input class="form-input" type="month" min="2020-01" max="2022-01" placeholder="MM/YY"/>
+          <input class="form-input" type="date" min="2020-01" max="2028-01" pattern="\d{2}-\d{2}" placeholder="MM/YY" />
           <br /><br />
-          <label class="form-label" for="">CV CODE</label>
+          <label class="form-label" for="">CVC CODE</label>
           <input class="form-input" type="text" placeholder="CVC" />
           <br /><br />
           <label class="form-label" for="">COUPON CODE</label>
           <input class="form-input" type="text" />
           <br /><br />
+
           <button class="form-button" type="submit">Checkout and Buy</button>
+
         </fieldset>
       </form>
     </div>

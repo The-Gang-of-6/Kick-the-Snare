@@ -9,11 +9,11 @@ var d = document;
 var cartContainer = d.getElementById("cart-items-container");
 var arrayOfObjects = JSON.parse(localStorage.getItem('instruments'));
 var currentArrayOfObjects = [];
-console.log(arrayOfObjects);
+// console.log(arrayOfObjects);
 var theadNames = ["Item Name", 'Item Image', "Price", "Quantity", "Operation"];
 //check if theres is any items that user added to cart
-if (localStorage.getItem('items') === null) {
-  cartContainer.innerHTML = "Nothing to show";
+if (localStorage.getItem('items') == null) {
+  cartContainer.innerHTML = "Your Cart is Empty";
 }
 else {
   var items = JSON.parse(localStorage.getItem('items'));
@@ -158,8 +158,9 @@ function removeStorage(value) {
       if (i == value) {
         continue;
       }
-      arr.push(i+'');
+      arr.push(i + '');
       localStorage.setItem('items', JSON.stringify(arr));
     }
   }
+  d.getElementById("cart").click()
 }

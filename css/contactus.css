@@ -16,6 +16,7 @@
 .inner-container{
   border-radius: 5px;
   background-color: #f1f1f1;
+  margin: 30px 0px;
 }
 .contact-us-control {
 
@@ -23,6 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px 0px;
 }
 
 .contact-us-hero {
@@ -35,7 +37,9 @@
   text-align: center;
   font-weight: bold;
   font-size: 72px;
-  color: #504c4c;
+  color: #504c4c;  
+  
+  
 }
 .left-side {
   padding: 35px;
@@ -58,7 +62,7 @@
   font-size: 30px;
   text-decoration: none;
   padding: 5px;
-  color:#a12559;
+  color:#F74144;
   border-radius: 5px;
 }
 .contact-us-input,
@@ -76,7 +80,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #a12559;
+  background-color: #F74144;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -124,5 +128,9 @@ margin: 0 5px 0 0;
     color:pink;
 } */
 .map >i{
-    color:rgb(221, 21, 121);
+    color:#F74144;
+}
+
+.heart{
+  color: #F74144;
 }

@@ -55,7 +55,7 @@
 }
 
 .power-switch:checked + .power-slider {
-  background-color: var(--main-heading-text-color);
+  background-color:#F74144;
 }
 
 .power-switch:focus + .power-slider {
@@ -86,8 +86,11 @@
 }
 .volume-slider-container > i{
   margin: 0px 5px;
-  color:  var(--main-heading-text-color); ;
+  color:  #f74144 ;
+
+  vertical-align: middle;
 }
+
 .volume-slider {
   -webkit-appearance: none;
   width: 100%;
@@ -110,7 +113,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: var(--main-heading-text-color);
+  background: #F74144;
   cursor: pointer;
 }
 
@@ -118,7 +121,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background:var(--main-heading-text-color);
+  background:#F74144;
   cursor: pointer;
 }
 

@@ -41,10 +41,11 @@
   border-radius: 3px;
 }
 .price {
-  color:  #59f100;
+  color: #475141;
   font-size: 22px;
   margin-top: 20px;
   font-family: cursive;
+  text-shadow: 1px 1px 2px #403f3f;
 }
 .card .add-to-cart,
 .card .show-det {
@@ -63,17 +64,33 @@
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
 }
 .card .add-to-cart{
-  background-color: #70ff1d;
+  background-color: #f74144;
 }
 .card .show-det{
-  background-color: #0099ff;
+  background-color: #33cf55;
 }
 
-.card .add-to-cart:hover,
-.card .show-det:hover {
-  opacity: 0.7;
+.card .add-to-cart:hover{
+  background-color: #f00b0f;
   transition: 0.3s;
 }
+.card .show-det:hover{
+  background-color: #21be43;
+  transition: 0.3s;
+}
+
+
+.card .add-to-cart:active{
+  transform: translateY(4px);
+}
+.card .show-det:active{
+  transform: translateY(4px);
+}
+
+
+
+
+
 
 .desc {
   height: 70px;

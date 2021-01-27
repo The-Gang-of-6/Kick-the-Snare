@@ -122,33 +122,33 @@ window.addEventListener('load', function () {
     ]
 
     var soundsUrl = [
-        '../audio/drums/bass_drum.wav',
-        '../audio/drums/hits.wav',
-        '../audio/drums/kick_bass_drum.wav',
-        '../audio/drums/kick.wav',
-        '../audio/drums/kick2.wav',
-        '../audio/drums/long_bass_drum.wav',
-        '../audio/drums/snare.wav',
-        '../audio/drums/snare2.wav',
-        '../audio/drums/tom.wav',
-        '../audio/piano/A.mp3',
-        '../audio/piano/Asharp4.mp3',
-        '../audio/piano/A4.mp3',
-        '../audio/piano/A6.wav',
-        '../audio/piano/B5.wav',
-        '../audio/piano/Csharp4.wav',
-        '../audio/piano/C1.wav',
-        '../audio/piano/C4.mp3',
-        '../audio/piano/C16.mp3',
-        '../audio/piano/C6.wav',
-        '../audio/piano/D4.mp3',
-        '../audio/piano/E4.wav',
-        '../audio/piano/E5.mp3',
-        '../audio/piano/E6.wav',
-        '../audio/piano/G6.wav',
-        '../audio/piano/G4.mp3',
-        '../audio/piano/High_G.wav',
-        '../audio/piano/long_b1.ogg',
+        '../audio/drums/bass_drum.wav', //q
+        '../audio/drums/hits.wav',//w
+        '../audio/drums/kick_bass_drum.wav',//e
+        '../audio/drums/kick.wav',//a
+        '../audio/drums/kick2.wav',//s
+        '../audio/drums/long_bass_drum.wav',//d
+        '../audio/drums/snare.wav',//z
+        '../audio/drums/snare2.wav', //x
+        '../audio/drums/tom.wav', //c
+        '../audio/piano/A_sharp_4.wav',//r
+        '../audio/piano/A4.wav',//t
+        '../audio/piano/G4.wav',//y
+        '../audio/piano/D4.wav',//f
+        '../audio/piano/C4.wav',//g
+        '../audio/piano/C_sharp_4.wav',//h
+        '../audio/piano/C1.wav',//v
+        '../audio/piano/E5.mp3',//b
+        '../audio/piano/C_sharp_6.wav',//n
+        '../audio/piano/C6.wav',//u
+        '../audio/piano/E6.wav',//i
+        '../audio/piano/A6.wav',//o
+        '../audio/piano/B5.wav',//j
+        '../audio/piano/E4.wav',//k
+        '../audio/piano/G6.wav',//l
+        '../audio/piano/A_sharp_6.wav',//m
+        '../audio/piano/High_G.wav',//,
+        '../audio/piano/long_b1.ogg',//.
 
 
 

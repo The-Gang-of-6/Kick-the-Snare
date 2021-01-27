@@ -138,7 +138,7 @@ table {
   display: block;
   margin: 0 auto;
   font-family: "Courier New", Courier, monospace;
-
+    font-weight: bold;
   text-align: left;
   color: #1a1a1d;
 }
@@ -151,13 +151,16 @@ fieldset {
   padding: 10px;
   font-weight: lighter;
   overflow-y: auto;
+  font-weight: bold;
 }
 
 .img-style {
   width: 50px;
   height: 50px;
 }
-.form-label i{
+.accepted-card{
   /* color: var(--header-background-color); */
-  color: #33cf55;
+ width: 30px;
+ height: 30px;
+ vertical-align: middle;
 }

@@ -147,7 +147,7 @@
   box-shadow: -15px 9px 0px 1px black, 2px 10px 0px 0px black, -26px 18px 2px 1px #dc7137, 0px 18px 0px 1px #dc7137;
   transform-style: preserve-3d;
   
-  transform: skew(0deg , 13deg);
+  /* transform: skew(0deg , 13deg); */
 }
 
 .middle-panal{
@@ -162,7 +162,7 @@
   box-shadow:0px 13px 0px -3px black, 0px 23px 2px -3px #c3073F;
   border-left:solid 3px #dc7137;
   border-right:solid 3px  rgb(0, 225, 255);
-  transform: translate(0px, 58px);
+  /* transform: translate(0px, 58px); */
 
   transform-style: preserve-3d;
 }
@@ -175,7 +175,7 @@
   grid-row-gap: 10px;
   grid-template-columns:  auto auto auto;
   background-color: #d3d3d3;
-  transform: skew(0deg , -13deg);
+  /* transform: skew(0deg , -13deg); */
   border-top-right-radius: 219px 41px;
   box-shadow: 16px 9px 0px 1px black, 0px 10px 0px 0px black, 22px 15px 2px 3px rgb(0, 225, 255), 0px 18px 0px 0px rgb(0, 225, 255);
 
@@ -219,6 +219,13 @@
   box-shadow: 0 5px skyblue, 0px 0px 6px 9px white;
  
   transform: translateY(4px);
+  
+}
+
+.drum-key-keyboard-clicked{
+  background-color: var(--drum-machine-button-second-color)!important;
+  box-shadow: 0 5px skyblue, 0px 0px 6px 9px white;
+  transform: translateY(3px);
   
 }
 

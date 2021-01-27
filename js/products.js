@@ -73,10 +73,15 @@ for (var item = 0; item < productsArray.length; item++) {
 }
 localStorage.setItem('instruments', JSON.stringify(products));
 
-
 function addItem(value) {
-  //productAddToCart.value;
-  added_products.push(value);
+  if (localStorage.getItem('items') !== null) {
+    added_products = JSON.parse(localStorage.getItem('items'));
+  }else{
+    added_products =[];
+  }
+  if (!added_products.includes(value)) {
+    added_products.push(value);
+  }
   localStorage.setItem('items', JSON.stringify(added_products));
 }
 

@@ -13,7 +13,8 @@ var currentArrayOfObjects = [];
 var theadNames = ["Item Name", 'Item Image', "Price", "Quantity", "Operation"];
 //check if theres is any items that user added to cart
 if (localStorage.getItem('items') == null) {
-  cartContainer.innerHTML = "Your Cart is Empty";
+  d.getElementById("cart-items-container-non").innerHTML = "Your Cart is Empty"
+
 }
 else {
   var items = JSON.parse(localStorage.getItem('items'));

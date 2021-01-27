@@ -60,15 +60,19 @@
   color: white;
   padding: 10px;
   height: 70px;
-  font-weight: 600;
+  font-weight: 400;
   overflow: auto;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.5px;
+
 }
 .prod-det .condition-det {
   font-size: 22px;
   color: white;
   padding: 10px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Oswald', sans-serif;
+
+
 
 }
 .prod-det p span {

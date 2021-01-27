@@ -13,7 +13,6 @@ var addToCart = d.getElementById("addToCart")
 var detailedItem = JSON.parse(localStorage.getItem("DetailedItem"))
 
 addToCart.setAttribute("onclick", `addItem('${detailedItem.id}')`)
-
 itemName.textContent = ""
 itemPrice.textContent = ""
 itemDescription.textContent = ""

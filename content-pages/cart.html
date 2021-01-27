@@ -1,33 +1,51 @@
 <main id="main">
-  <div class="cart-container" id="cart-container">
-    <div class="cart-items-container" id="cart-items-container"></div>
-    <div class="form-div">
-      <form action="" id="payment-details">
-        <fieldset>
-          <legend><img class="accepted-card" src="../img/visa.png" alt="visa">
-            <img class="accepted-card" src="../img/mastercard.png" alt="mastercard">
-            <img class="accepted-card" src="../img/discover.png" alt="discover">
-          </legend>
-          <label class="form-label" for="">CARD NUMBER
-          </label>
+  <div class="main-cart-container">
+    <div class="cart-container" id="cart-container">
+      <div class="cart-items-container" id="cart-items-container">
+        <p id="cart-items-container-non"></p>
+      </div>
+      <div class="form-div">
+        <form action="" id="payment-details">
+          <div class="row">
+            <div class="col col-70">
+              <label class="form-label" for="owner">Owner</label>
+              <input class="form-input" type="text" id="owner" min="0" placeholder="Valid Card Number" />
+            </div>
+            <div class="col col-30">
+              <label class="form-label" for="cvv">CVV</label>
+              <input class="form-input" id="cvv" type="text" placeholder="CVV" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label class="form-label" for="cardNumber">Card Number</label>
+              <input class="form-input" type="text" id="cardNumber" min="0" placeholder="Valid Card Number" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label class="form-label" for="exp-date">Expiration Date</label>
+              <input class="form-input" id="exp-date" type="month" min="2020-01" max="2028-12" placeholder="MM/YY" />
+            </div>
+            <div class="col">
+              <br>
+              <img class="accepted-card" src="../img/visa.png" alt="visa">
+              <img class="accepted-card" src="../img/mastercard.png" alt="mastercard">
+              <img class="accepted-card" src="../img/discover.png" alt="discover">
+            </div>
+          </div>
 
-          <input class="form-input" type="text" min="0" placeholder="Valid Card Number" />
-          <br /><br />
-          <label class="form-label" for="">EXPIRAITION DATE</label>
-          <input class="form-input" type="month" min="2020-01" max="2028-12" placeholder="MM/YY" />
-          <br /><br />
-          <label class="form-label" for="">CVC CODE</label>
-          <input class="form-input" type="text" placeholder="CVC" />
-          <br /><br />
-          <label class="form-label" for="">COUPON CODE</label>
-          <input class="form-input" type="text" />
-          <br /><br />
 
-          <button class="form-button" type="submit">Checkout and Buy</button>
+          <div class="row">
+            <div class="col">
+              <button class="form-button" type="submit">Checkout and Buy</button>
+            </div>
+          </div>
 
-        </fieldset>
+      </div>
       </form>
     </div>
+  </div>
   </div>
   <script src="../js/cart.js"></script>
 </main>

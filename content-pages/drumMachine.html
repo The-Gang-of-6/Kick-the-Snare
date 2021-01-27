@@ -1,16 +1,33 @@
 <main id="main">
 
     <div class="drum-container">
-        <div class="panal-confiq">
-            <label class="switch">
-                <input type="checkbox" class="power-switch round" id="power-switch">
-                <span class="power-slider round"></span>
-            </label>
+        <div class="panal-confiq-container">
+            <div class="panal-confiq">
+                <p class="on-off">On/Off</p>
+                <label class="switch">
 
-            <div class="volume-slider-container">
-                <i class="fas fa-volume-down"></i> <input type="range" min="1" max="100" value="50"
-                    class="volume-slider" id="volume"><i class="fas fa-volume-up"></i>
+                    <input type="checkbox" class="power-switch round" id="power-switch">
+                    <span class="power-slider round"></span>
+                </label>
 
+                <div class="volume-slider-container">
+                    <i class="fas fa-volume-down"></i> <input type="range" min="1" max="100" value="50"
+                        class="volume-slider" id="volume"><i class="fas fa-volume-up"></i>
+
+                </div>
+            </div>
+        </div>
+        <div class="key-pressed-container">
+            <div class="key-pressed">
+                <label class="shown-key-pressed-label" for="showPressedKey">Key Name:</label>
+                <p class="shown-key-pressed" id="showPressedKey">The Panal Is Off</p>
+            </div>
+        </div>
+        <div class="drum-heading-container">
+            <div class="drum-heading">
+                <div class="helper-header">Drum Keys</div>
+                <div class="helper-header">Piano 1 Keys </div>
+                <div class="helper-header">Piano 2 Keys</div>
             </div>
         </div>
         <div class="drum">

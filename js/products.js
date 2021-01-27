@@ -24,19 +24,6 @@ var productsArray = [['Violin', `The violin, sometimes known as a fiddle, is a w
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 var mainContainer = d.getElementById("products-container");
 var productAddToCart;
 
@@ -81,7 +68,7 @@ function createProduct(item) {
   productShowDetails.textContent = "Show Details";
 
   productShowDetails.id = 'ShowDetalis' + item.id;
-  productShowDetails.setAttribute('onclick', `showDetalis( '${item.id}','${item.imgUrl}','${item.name}','${item.price}','${item.description}'  )`);
+  productShowDetails.setAttribute('onclick', `showDetalis( ${item.id},'${item.imgUrl}','${item.name}','${item.price}','${item.description}'  )`);
   productShowDetails.value = item.id;
 
   prodcutCard.appendChild(productShowDetails);

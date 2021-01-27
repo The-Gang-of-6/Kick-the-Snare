@@ -87,6 +87,18 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   width: 150px;
+  outline: none;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+input[type="submit"]:hover {
+  background-color: #f00b0f;
+  transition: 0.3s;
+}
+
+input[type="submit"]:active {
+  transform: translateY(4px);
 }
 /*
 input[type=submit]:hover {

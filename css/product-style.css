@@ -39,7 +39,7 @@
 }
 
 .prod-det h1 {
-  font-size: 72px;
+  font-size: 35px;
   font-weight: bolder;
   border-bottom: solid 3px white;
   color: white;
@@ -52,17 +52,24 @@
   padding: 10px;
   font-family: "Raleway", sans-serif;
 }
+
+
+ 
 .prod-det .info-det {
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   padding: 10px;
+  height: 70px;
+  font-weight: 600;
+  overflow: auto;
   font-family: "Raleway", sans-serif;
 }
 .prod-det .condition-det {
-  font-size: 15px;
+  font-size: 22px;
   color: white;
   padding: 10px;
   font-family: "Raleway", sans-serif;
+
 }
 .prod-det p span {
   font-size: 60px;

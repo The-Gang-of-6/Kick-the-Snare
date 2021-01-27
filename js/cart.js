@@ -148,9 +148,11 @@ function cartRender() {
 // }
 
 function removeStorage(value) {
+  items = JSON.parse(localStorage.getItem('items'));
   var arr = [];
   if (items.length == 1) {
     localStorage.removeItem('items');
+    arr = [];
   } else {
 
 
@@ -161,6 +163,7 @@ function removeStorage(value) {
       arr.push(i + '');
       localStorage.setItem('items', JSON.stringify(arr));
     }
+    items = arr;
   }
   d.getElementById("cart").click()
 }

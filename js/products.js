@@ -7,7 +7,8 @@ var d = document;
 //items that user has chosen to add to cart
 var added_products = [];
 var products = []; //// array of obj
-var productsArray = [['Violin', '../img/violin.png', '1400'], ['Drum', '../img/drum.jpg', 800], ['Oud', '../img/oud.png', 2000], ['Harp', '../img/harp.png', 2500], ['Tamborine', '../img/Tamborine.png', 750], ['Trumpet', '../img/Trumpet.jpg', 1750]];
+var productsArray = [['Violin', '../img/violin.png', '1400'], ['Drum', '../img/drum.jpg', 800], ['Oud', '../img/oud.png', 2000], ['Harp', '../img/harp.png', 2500], ['Tamborine', '../img/Tamborine.png', 750], ['Trumpet', '../img/Trumpet.jpg', 1750],['Bongo','../img/bongo.png',1500],['Piano','../img/piano.png',3000],['Button accordion','../img/button-accordion.png',2500],['Flute','../img/flute.png',950],['Zither','../img/zither.png',2800],['Reed Pipe','../img/reed-pipe.jpg',1350]];
+
 var mainContainer = d.getElementById("products-container");
 var productAddToCart;
 
@@ -72,10 +73,15 @@ for (var item = 0; item < productsArray.length; item++) {
 }
 localStorage.setItem('instruments', JSON.stringify(products));
 
-
 function addItem(value) {
-  //productAddToCart.value;
-  added_products.push(value);
+  if (localStorage.getItem('items') !== null) {
+    added_products = JSON.parse(localStorage.getItem('items'));
+  }else{
+    added_products =[];
+  }
+  if (!added_products.includes(value)) {
+    added_products.push(value);
+  }
   localStorage.setItem('items', JSON.stringify(added_products));
 }
 

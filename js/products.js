@@ -7,7 +7,7 @@ var d = document;
 //items that user has chosen to add to cart
 var added_products = [];
 var products = []; //// array of obj
-var productsArray = [['Violin', '../img/violin.png', '1400'], ['Drum', '../img/drum.jpg', 800], ['Oud', '../img/oud.png', 2000], ['Harp', '../img/harp.png', 2500], ['Tamborine', '../img/Tamborine.png', 750], ['Trumpet', '../img/Trumpet.jpg', 1750],['Bongo','../img/bongo.png',1500],['Piano','../img/piano.png',3000],['Button accordion','../img/button-accordion.png',2500],['Flute','../img/flute.png',950],['Zither','../img/zither.png',2800],['Reed Pipe','../img/reed-pipe.jpg',1350]];
+var productsArray = [['Violin', '../img/violin.png', '1400'], ['Drum', '../img/drum.jpg', 800], ['African Drum', '../img/african-drum.png', 2000], ['Harp', '../img/harp.png', 2500], ['Tamborine', '../img/Tamborine.png', 750], ['Trumpet', '../img/Trumpet.jpg', 1750],['Bongo','../img/bongo.png',1500],['Piano','../img/piano.jpg',3000],['Button Accordion','../img/Button-accordion.jpg',2500],['Flute','../img/flute.png',950],['Zither','../img/zither.png',2800],['Reed Pipe','../img/reed-pipe.jpg',1350]];
 
 var mainContainer = d.getElementById("products-container");
 var productAddToCart;

@@ -10,28 +10,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px 0px;
 }
 
 .product-details .prod-img {
-  background-color: aliceblue;
+  background-color: white;
   padding: 60px;
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
   /* transform: skewY(3deg); */
   border-bottom-left-radius: 40px;
   border-top-left-radius: 40px;
 }
 .prod-img img {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
 }
 
 .product-details .prod-det {
   padding: 60px;
   /* margin-left: 15px; */
   background-color: var(--aside-background-color);
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
   /* transform: skewY(-3deg); */
   border-bottom-right-radius: 40px;
   border-top-right-radius: 40px;

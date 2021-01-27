@@ -41,7 +41,7 @@
   border-radius: 3px;
 }
 .price {
-  color: rgb(119, 62, 62);
+  color:  #59f100;
   font-size: 22px;
   margin-top: 20px;
   font-family: cursive;
@@ -54,14 +54,19 @@
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: var(--main-heading-text-color);
   text-align: center;
   cursor: pointer;
   width: 50%;
   font-size: 18px;
-  border-radius: 20px;
+  border-radius: 7px;
   margin-left: 25%;
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
+}
+.card .add-to-cart{
+  background-color: #70ff1d;
+}
+.card .show-det{
+  background-color: #0099ff;
 }
 
 .card .add-to-cart:hover,
@@ -78,7 +83,7 @@
 .card-head {
   font-size: 30px;
   font-weight: bold;
-  color: var(--main-heading-text-color);
+  color: #F74144;
   margin-top: 15px;
   text-indent: 5px;
   letter-spacing: 3px;

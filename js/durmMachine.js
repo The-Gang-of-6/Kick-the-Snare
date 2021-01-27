@@ -4,6 +4,7 @@ window.addEventListener('load', function () {
 
     var d = document;
 
+    var keyTrigger = d.body.addEventListener("keypress", playIt)
 
 
     var power = d.getElementById("power-switch")
@@ -26,7 +27,7 @@ window.addEventListener('load', function () {
     var key16 = d.getElementById("key16")
     var key17 = d.getElementById("key17")
     var key18 = d.getElementById("key18")
-    var key18 = d.getElementById("key18")
+    var key19 = d.getElementById("key19")
     var key20 = d.getElementById("key20")
     var key21 = d.getElementById("key21")
     var key22 = d.getElementById("key22")
@@ -54,7 +55,7 @@ window.addEventListener('load', function () {
     key16.addEventListener("click", playIt);
     key17.addEventListener("click", playIt);
     key18.addEventListener("click", playIt);
-    key18.addEventListener("click", playIt);
+    key19.addEventListener("click", playIt);
     key20.addEventListener("click", playIt);
     key21.addEventListener("click", playIt);
     key22.addEventListener("click", playIt);
@@ -68,6 +69,7 @@ window.addEventListener('load', function () {
     power.addEventListener("change", playIt);
 
     volume.addEventListener("change", playIt);
+    volume.addEventListener("change", changeVolume);
 
     keyboardButtonKeyId = ["key1",
         "key2",
@@ -87,7 +89,7 @@ window.addEventListener('load', function () {
         "key16",
         "key17",
         "key18",
-        "key18",
+        "key19",
         "key20",
         "key21",
         "key22",
@@ -100,91 +102,76 @@ window.addEventListener('load', function () {
 
 
     keyboardKey = ['q', 'w', 'e',
-        't', 'y', 'u', 'i', 'o', 'a',
-        's', 'd', 'f', 'g', 'h', 'j',
-        'k', 'l', 'z', 'x', 'c', 'v',
-        'b', 'n', 'm', ',', '.']
+        'a', 's', 'd', 'z', 'x', 'c',
+        'r', 't', 'y', 'f', 'g', 'h',
+        'v', 'b', 'n', 'u', 'i', 'o',
+        'j', 'k', 'l', 'm', ',', '.']
 
 
-    var keyboardKeyCode = [
-        81, 87, 69, 82, 84, 89, 85, 73, 79, 65, 83,
-        68, 70, 71, 72, 74, 75, 76, 90, 88, 67, 86,
-        66, 78, 77, 188, 190,]
+    var keyboardKeyCodeUpperCase = [
+        81, 87, 69, 65, 83, 68, 90, 88, 67,
+        82, 84, 89, 70, 71, 72, 86, 66, 78,
+        85, 73, 79, 74, 75, 76, 77, 188, 190
 
+    ]
+
+    var keyboardKeyCodeLowerCase = [
+        113, 119, 101, 97, 115, 100, 122, 120, 99,
+        114, 116, 121, 102, 103, 104, 118, 98, 110,
+        117, 105, 111, 106, 107, 108, 109, 44, 46
+    ]
 
     var soundsUrl = [
-        '../../audio/sample1.ogg',
-        '../audio/hats.wav',
-        '../audio/kick.wav',
-        '../audio/snare_rim.wav',
-        '../audio/snare.wav',
-        '../audio/vocal_dance.wav',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
-        '../audio/',
+        '../audio/drums/bass_drum.wav',
+        '../audio/drums/hits.wav',
+        '../audio/drums/kick_bass_drum.wav',
+        '../audio/drums/kick.wav',
+        '../audio/drums/kick2.wav',
+        '../audio/drums/long_bass_drum.wav',
+        '../audio/drums/snare.wav',
+        '../audio/drums/snare2.wav',
+        '../audio/drums/tom.wav',
+        '../audio/piano/A.mp3',
+        '../audio/piano/Asharp4.mp3',
+        '../audio/piano/A4.mp3',
+        '../audio/piano/A6.wav',
+        '../audio/piano/B5.wav',
+        '../audio/piano/Csharp4.wav',
+        '../audio/piano/C1.wav',
+        '../audio/piano/C4.mp3',
+        '../audio/piano/C16.mp3',
+        '../audio/piano/C6.wav',
+        '../audio/piano/D4.mp3',
+        '../audio/piano/E4.wav',
+        '../audio/piano/E5.mp3',
+        '../audio/piano/E6.wav',
+        '../audio/piano/G6.wav',
+        '../audio/piano/G4.mp3',
+        '../audio/piano/High_G.wav',
+        '../audio/piano/long_b1.ogg',
+
+
+
     ]
 
 
     var soundsName = [
-        'Ekit Tom',
-        'hats',
-        'kick',
-        'snare_rim',
-        'snare',
-        'vocal_dance',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-
-
-    ]
+        'bass drum', 'hits', 'kick bass drum', 'kick 1', 'kick 2', 'long bass drum', 'snare 1', 'snare 2', 'tom', 'A Key', 'A Sharp 4 Key',
+        'A4 Key', 'A6 Key', 'B5 Key', 'C Sharp 4 Key', 'C1 Key', 'C4 Key', 'C6 Key', 'C6 Key', 'D4 Key', 'E4 Key', 'E5 Key',
+        'E6 Key', 'G6 Key', 'G4 Key', 'High G Key', 'long B Key']
 
 
 
     var insturmentObjconatiner = [];
 
 
-    function insturment(key, keyboardButtonKeyId, keyCode, sound, soundUrl) {
+    function insturment(key, keyboardButtonKeyId, keyboardKeyCodeUpperCase, keyboardKeyCodeLowerCase, sound, soundUrl) {
+
 
         this.key = key;
         this.keyboardButtonKeyId = keyboardButtonKeyId
-        this.keyCode = keyCode;
+        this.keyboardKeyCodeUpperCase = keyboardKeyCodeUpperCase;
+        this.keyboardKeyCodeLowerCase = keyboardKeyCodeLowerCase;
         this.sound = sound;
         this.soundUrl = soundUrl;
 
@@ -202,39 +189,48 @@ window.addEventListener('load', function () {
 
     keyboardKey.map((value, index) => {
 
-        new insturment(value, keyboardButtonKeyId[index], keyboardKeyCode[index], soundsName[index], soundsUrl[index]);
+        new insturment(value, keyboardButtonKeyId[index], keyboardKeyCodeUpperCase[index], keyboardKeyCodeLowerCase[index], soundsName[index], soundsUrl[index]);
 
     })
 
 
 
     // keyboardKey.map((value, index) => {
-    //      console.log(insturmentObjconatiner[index])
+    //     console.log(insturmentObjconatiner[index])
     // })
     var audio = null
     function playIt(event) {
         if (!power.checked) {
-            audio.src = '';
             audio.remove();
             audio = null
         }
 
-
         if (power.checked && event.target.id != "volume") {
-
             if (audio != null) {
-                audio.src = '';
-                audio.remove();
-                audio = null
-            }
+                try {
+                    audio.remove();
+                    audio = null
+                } catch (e) {
 
+                }
+
+            }
             insturmentObjconatiner.map((value, index) => {
                 if (event.target.id == insturmentObjconatiner[index].keyboardButtonKeyId) {
-                    keyId = index
-                    audio = new Audio(insturmentObjconatiner[keyId].soundUrl)
+                    audio = new Audio(insturmentObjconatiner[index].soundUrl)
                     audio.volume = insturment.prototype.volume / 100;
                     audio.play()
+                }
 
+                if (event.keyCode == insturmentObjconatiner[index].keyboardKeyCodeUpperCase || event.keyCode == insturmentObjconatiner[index].keyboardKeyCodeLowerCase) {
+                    var buttonPressed = d.getElementById(insturmentObjconatiner[index].keyboardButtonKeyId)
+                    buttonPressed.classList.add("drum-key-keyboard-clicked");
+                    audio = new Audio(insturmentObjconatiner[index].soundUrl)
+                    audio.volume = insturment.prototype.volume / 100;
+                    audio.play()
+                    setInterval(() => {
+                        buttonPressed.classList.remove("drum-key-keyboard-clicked")
+                    }, 400);
                 }
             })
         }
@@ -247,4 +243,6 @@ window.addEventListener('load', function () {
         }
     }
 
+
 })
+

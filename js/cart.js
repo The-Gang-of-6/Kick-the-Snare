@@ -166,5 +166,5 @@ function removeStorage(value) {
     }
     items = arr;
   }
-  d.getElementById("cart").click()
+  window.location.reload();
 }

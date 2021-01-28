@@ -27,10 +27,12 @@ header{
 }
 .header-nav .nav-links  a:hover{
   background-color: var(--main-text-color-white);
-  color: var(--main-heading-text-color);
+  color: var(--header-background-color);
   
   transition: 0.3s;
 }
+
+
 
 .header-nav img{
   
@@ -54,3 +56,5 @@ header{
 .remove-it{
   display: none;
 }
+
+

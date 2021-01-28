@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="../img/Untitled-2.ai22.jpg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kick The Snare</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header-style.css" />
+    <link rel="stylesheet" href="../css/footer-style.css" />
+    <link rel="stylesheet" href="../css/sales-style.css" />
+    <link rel="stylesheet" href="../css/about-us-style.css" />
+    <link rel="stylesheet" href="../css/drum-machine.css" />
+    <link rel="stylesheet" href="../css/aside-style.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/product-style.css" />
+    <link rel="stylesheet" href="../css/contactus.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header id="header">
+        <nav class="header-nav">
+            <!-- <img src="https://via.placeholder.com/150x80" alt="logo"> -->
+
+            <!-- <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/header-style.css" /> -->
+            <!-- <header id="header"> -->
+            <!-- <nav> -->
+            <img src="../img/Untitled-2.ai22.png" alt="logo" class="logo-img" />
+
+            <h2>Kick The Snare</h2>
+            <div class="nav-links">
+                <a id="drumMachine" href="../content-pages/drumMachine.html">Play</a>
+                <a id="products" href="../content-pages/products.html">Store</a>
+                <a class="remove-it" id="product" href="../content-pages/product.html">product</a>
+                <a id="contactus" href="../content-pages/contactus.html">Contact Us</a>
+                <a id="aboutUs" href="../content-pages/aboutUs.html">About us</a>
+
+                <a id="cart" href="../content-pages/cart.html"> Cart <i class="fas fa-shopping-cart"></i></a>
+
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+
+        <div class="drum-container">
+            <div class="panal-confiq-container">
+                <div class="panal-confiq">
+                    <p class="on-off">On/Off</p>
+                    <label class="switch">
+                        <input type="checkbox" class="power-switch round" id="power-switch">
+                        <span class="power-slider round"></span>
+                    </label>
+                    <div class="volume-slider-container">
+                        <i class="fas fa-volume-down"></i> <input type="range" min="1" max="100" value="50"
+                            class="volume-slider" id="volume"><i class="fas fa-volume-up"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="key-pressed-container">
+                <div class="key-pressed">
+                    <label class="shown-key-pressed-label" for="showPressedKey">Key Name:</label>
+                    <p class="shown-key-pressed" id="showPressedKey">The Panal Is Off</p>
+                </div>
+            </div>
+            <div class="drum-heading-container">
+                <div class="drum-heading">
+                    <div class="helper-header">Drum Keys</div>
+                    <div class="helper-header">Piano 1 Keys </div>
+                    <div class="helper-header">Piano 2 Keys</div>
+                </div>
+            </div>
+            <div class="drum">
+                <div class="left-panal">
+                    <button class="drum-key" id="key1">Q</button>
+                    <button class="drum-key" id="key2">W</button>
+                    <button class="drum-key" id="key3">E</button>
+                    <button class="drum-key" id="key4">A</button>
+                    <button class="drum-key" id="key5">S</button>
+                    <button class="drum-key" id="key6">D</button>
+                    <button class="drum-key" id="key7">Z</button>
+                    <button class="drum-key" id="key8">X</button>
+                    <button class="drum-key" id="key9">C</button>
+
+                </div>
+                <div class="middle-panal">
+                    <button class="drum-key " id="key10">R</button>
+                    <button class="drum-key " id="key11">T</button>
+                    <button class="drum-key " id="key12">Y</button>
+                    <button class="drum-key " id="key13">F</button>
+                    <button class="drum-key " id="key14">G</button>
+                    <button class="drum-key " id="key15">H</button>
+                    <button class="drum-key " id="key16">V</button>
+                    <button class="drum-key " id="key17">B</button>
+                    <button class="drum-key " id="key18">N</button>
+                </div>
+                <div class="right-panal">
+                    <button class="drum-key " id="key19">U</button>
+                    <button class="drum-key " id="key20">I</button>
+                    <button class="drum-key " id="key21">O</button>
+                    <button class="drum-key " id="key22">J</button>
+                    <button class="drum-key " id="key23">K</button>
+                    <button class="drum-key " id="key24">L</button>
+                    <button class="drum-key " id="key25">M</button>
+                    <button class="drum-key " id="key26">,</button>
+                    <button class="drum-key " id="key27">.</button>
+                </div>
+            </div>
+
+            <div class="track-samples-container">
+                <div class="track-samples">
+                    <div class="samples">Track Samples</div>
+                </div>
+            </div>
+
+            <div class="drum-samples-container">
+                <div class="audio-sample">
+                    <audio controls>
+                        <source src='../audio/sample1.wav' type="audio/wav">
+                    </audio>
+                </div>
+                <div class="audio-sample">
+                    <audio controls>
+                        <source src='../audio/sample2.mp3' type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="sociel-links">
+
+                <a href="#" class="sociel-icon"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#" class="sociel-icon"><i class="fab fa-twitter"></i></a>
+
+                <a href="#" class="sociel-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+
+
+            <div class="copy-rights">
+                <p>Kick The Snare © 2021. All Rights Reserved proudly Published</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+<script type="text/javascript" src="../js/durmMachine.js"></script>
+
+</html>

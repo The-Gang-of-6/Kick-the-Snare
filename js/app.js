@@ -1,5 +1,5 @@
 "use strict";
-window.location.replace("../content-pages/drumMachine.html");
+window.location.replace("content-pages/drumMachine.html");
 // var d = document;
 
 // // AutoLoad html files into index  page

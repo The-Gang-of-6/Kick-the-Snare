@@ -69,7 +69,7 @@ header {
 }
 
 main {
-  background-image: url(../img/carbon.jpg);
+  background-image: url(img/carbon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

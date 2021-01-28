@@ -16,21 +16,19 @@
 }
 
 .cart-items-container {
+  box-sizing: border-box;
   overflow-y: auto;
   background-color: white;
-position: relative;
+  position: relative;
   border-collapse: collapse;
   border: 1px solid #1a1a1d;
-
   text-align: center;
-
   overflow-y: auto;
-
   width: 50%;
-  
   border-radius: 5px;
   box-shadow: 1px 4px 3px 1px rgba(255, 254, 254, 0.144);
   height: 100%;
+  padding: 10px;
 }
 
 .form-div {
@@ -53,6 +51,7 @@ position: relative;
 table {
   width: 100%;
   height: auto;
+  padding: 10px 15px;
 }
 
 th,
@@ -82,7 +81,7 @@ table {
   text-align: center;
   width: 100px;
   margin-left: 5px;
-  
+  padding: 10px 15px; 
   color: white;
   cursor: pointer;
   font-size: 15px;
@@ -90,7 +89,8 @@ table {
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.5);
 }
 .button2-style:hover {
-  background-color: #fd6e71;
+  background-color: #f00b0f;
+  transition: 0.3s;
 }
 .button-style:hover {
   background-color: #10f541;
@@ -109,7 +109,7 @@ table {
   box-shadow: 1px 4px 3px 1px rgba(255, 254, 254, 0.144);
 }
 .form-button {
-  width: 50%;
+  width: 60%;
   background-color: #24bd45;
   border-radius: 5px;
   color: white;
@@ -197,4 +197,6 @@ table {
   top: 45%;
   left: 45%;
   color: #f74144;
+  font-family: 'Oswald';
+  font-weight: bold;
 }

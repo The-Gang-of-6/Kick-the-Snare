@@ -3,10 +3,9 @@
 window.addEventListener('load', function () {
 
     var d = document;
-
-    var keyTrigger = d.body.addEventListener("keypress", playIt)
+    var keyTrigger = d.body.addEventListener("keypress", playItKeyboard)
     var showPressedKey = d.getElementById("showPressedKey");
-
+    var insturmentObjconatiner = [];
     var power = d.getElementById("power-switch")
     var volume = d.getElementById("volume")
     var key1 = d.getElementById("key1")
@@ -66,9 +65,9 @@ window.addEventListener('load', function () {
     key27.addEventListener("click", playIt);
 
 
-    power.addEventListener("change", playIt);
-
     volume.addEventListener("change", playIt);
+    volume.addEventListener("change", playItKeyboard);
+
     volume.addEventListener("change", changeVolume);
 
     keyboardButtonKeyId = ["key1", "key2", "key3", "key4", "key5", "key6", "key7", "key8", "key9", "key10",
@@ -125,11 +124,7 @@ window.addEventListener('load', function () {
         '../audio/piano/A_sharp_6.wav',//m
         '../audio/piano/High_G.wav',//,
         '../audio/piano/long_b1.ogg',//.
-
-
-
     ]
-
 
     var soundsName = [
         'bass drum', 'hits', 'kick bass drum', 'kick 1', 'kick 2', 'long bass drum', 'snare 1', 'snare 2', 'tom', 'A Key', 'A Sharp 4 Key',
@@ -138,46 +133,35 @@ window.addEventListener('load', function () {
 
 
 
-    var insturmentObjconatiner = [];
-
 
     function insturment(key, keyboardButtonKeyId, keyboardKeyCodeUpperCase, keyboardKeyCodeLowerCase, sound, soundUrl) {
-
-
         this.key = key;
         this.keyboardButtonKeyId = keyboardButtonKeyId
         this.keyboardKeyCodeUpperCase = keyboardKeyCodeUpperCase;
         this.keyboardKeyCodeLowerCase = keyboardKeyCodeLowerCase;
         this.sound = sound;
         this.soundUrl = soundUrl;
-
         insturmentObjconatiner.push(this)
-
-
     }
 
     insturment.prototype.volume = volume.value;
-
     function changeVolume() {
         insturment.prototype.volume = volume.value;
-
     }
 
     keyboardKey.map((value, index) => {
 
         new insturment(value, keyboardButtonKeyId[index], keyboardKeyCodeUpperCase[index], keyboardKeyCodeLowerCase[index], soundsName[index], soundsUrl[index]);
-
     })
 
 
 
-    // keyboardKey.map((value, index) => {
-    //     console.log(insturmentObjconatiner[index])
-    // })
+    //allow user to play by the mouse   
     var audio1 = null
-    var audio2 = null
     function playIt(event) {
+
         if (!power.checked) {
+
             try {
                 audio1.remove();
                 audio1 = null
@@ -195,34 +179,58 @@ window.addEventListener('load', function () {
 
         }
 
-        if (power.checked && event.target.id != "volume") {
-            if (audio1 != null || audio2 != null) {
-                try {
-                    audio1.remove();
-                    audio1 = null
-                } catch (e) {
+        if (power.checked) {
 
-                }
-
-                try {
-                    audio2.remove();
-                    audio2 = null
-                } catch (e) {
-
-                }
-
-            }
             insturmentObjconatiner.map((value, index) => {
                 if (event.target.id == insturmentObjconatiner[index].keyboardButtonKeyId) {
                     audio1 = new Audio(insturmentObjconatiner[index].soundUrl)
                     audio1.volume = insturment.prototype.volume / 100;
                     audio1.play()
-                    audio1.remove();
-                    audio1 = null
                     showPressedKey.innerHTML = ""
                     showPressedKey.innerHTML = insturmentObjconatiner[index].sound
                 }
 
+
+            })
+        }
+        if (event.target.id == "volume") {
+            try {
+                audio1.volume = volume.value / 100
+            } catch (e) {
+
+            }
+        }
+
+
+
+    }
+
+
+    //allow user to play by the keyboard   
+    var audio2 = null
+
+    function playItKeyboard(event) {
+
+
+        if (!power.checked) {
+            try {
+                audio1.remove();
+                audio1 = null
+            } catch (e) {
+
+            }
+            try {
+                audio2.remove();
+                audio2 = null
+            } catch (e) {
+
+            }
+            showPressedKey.innerHTML = "The Panal Is Off"
+
+        }
+
+        if (power.checked) {
+            insturmentObjconatiner.map((value, index) => {
                 if (event.keyCode == insturmentObjconatiner[index].keyboardKeyCodeUpperCase || event.keyCode == insturmentObjconatiner[index].keyboardKeyCodeLowerCase) {
                     var buttonPressed = d.getElementById(insturmentObjconatiner[index].keyboardButtonKeyId)
                     buttonPressed.classList.add("drum-key-keyboard-clicked");
@@ -232,8 +240,6 @@ window.addEventListener('load', function () {
                     setInterval(() => {
                         buttonPressed.classList.remove("drum-key-keyboard-clicked")
                     }, 400);
-                    audio1.remove();
-                    audio1 = null
                     showPressedKey.innerHTML = ""
                     showPressedKey.innerHTML = insturmentObjconatiner[index].sound
                 }
@@ -241,14 +247,18 @@ window.addEventListener('load', function () {
             })
         }
 
-
-
         if (event.target.id == "volume") {
-            audio.volume = volume.value / 100
-            //alert(audio.volume)
+
+            try {
+                audio2.volume = volume.value / 100
+            } catch (e) {
+
+            }
+
         }
+
     }
 
 
-})
 
+})
